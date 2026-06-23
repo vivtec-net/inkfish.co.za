@@ -1,0 +1,185 @@
+---
+import LayoutDefault from "../../layouts/layoutdefault.astro";
+
+import Book from "../../assets/images/book.svg";
+import Snow from "../../assets/images/snow.svg";
+import Arrow from "../../assets/images/arrow.svg";
+import Arch from "../../assets/images/arch.svg";
+import Wave from "../../assets/images/wave.svg";
+import Circle from "../../assets/images/circle.svg";
+import Splash from "../../assets/images/splash.svg";
+import Pointer from "../../assets/images/pointer.svg";
+import Star from "../../assets/images/star.svg";
+
+const title = "Home";
+const description = "My Description";
+---
+
+<LayoutDefault title={title} description={description}>
+	<section class="dark">
+		<div class="wrapper banner-intro">
+			<div class="grid g-center-y">
+				<h1 class="fs-6 uppercase">The Acumen Group</h1>
+				<p class="fs-3">Leveling Up Finance with Flair</p>
+			</div>
+			<div class="grid-icons">
+				<div>
+					<Wave width={64} height={64} stroke="var(--c-blue)" class="wave-animate" />
+				</div>
+				<div>
+					<Splash width={64} height={64} fill="var(--c-yellow)" class="splash-animate" />
+				</div>
+				<div>
+					<Star width={64} height={64} fill="var(--c-red)" class="star-animate" />
+				</div>
+				<div>
+					<Snow width={64} height={64} stroke="var(--c-yellow)" class="snow-animate" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section style="padding-top: 0;">
+		<div class="brand-theme"></div>
+		<div class="wrapper columns center-y" style="--col-size: 300px">
+			<div>
+				<h2 class="fs-5 uppercase">The Challenge</h2>
+				<p>
+					When Acumen came to us, they were legit great at accounting, but their digital presence was barely rolling a
+					D6. Their website was a snooze-fest, branding felt outdated, and their social media… well, it didn't exist.
+				</p>
+				<p>
+					For a finance brand targeting modern entrepreneurs, this was like trying to play Street Fighter with a
+					disconnected controller.
+				</p>
+			</div>
+			<div class="brand-logo">
+				<img src="../../images/inkfish-case-studies-acumen-group-brand.avif" alt="" />
+			</div>
+		</div>
+	</section>
+	<img src="../../images/inkfish-case-studies-acumen-group-laptop.avif" alt="" />
+	<section class="brand-gradient dark overlay watermark">
+		<div class="wrapper columns center-y" style="--col-size: 200px">
+			<div class="grid g-gap">
+				<img src="../../images/inkfish-case-studies-acumen-group-stars.avif" alt="" class="stars" />
+				<img src="../../images/inkfish-case-studies-acumen-group-website.avif" alt="" class="site-shot" />
+			</div>
+			<div class="grid" style="gap: 5rem">
+				<div>
+					<h2 class="fs-5 uppercase">The solution</h2>
+					<p class="bold">We equipped Acumen with a full upgrade pack:</p>
+					<ul>
+						<li>A newly designed, fast, user-friendly WordPress site</li>
+						<li>A refreshed brand identity with pixel-punch graphics</li>
+						<li>
+							Social media strategies built for scroll-stopping fun. Think: memes, boss battles with SARS, and Mario
+							Kart analogies that actually make sense
+						</li>
+					</ul>
+					<p>
+						Our campaigns didn't just post numbers; they told stories, cracked jokes, and made financial content
+						something people wanted to read. Because tax shouldn't feel like a final boss with no save point.
+					</p>
+				</div>
+				<div>
+					<h2 class="fs-5 uppercase">The result</h2>
+					<p class="bold">
+						Acumen's brand went from invisible to unmissable. Their social media started pulling attention from small
+						business owners, their website traffic boosted significantly, and they carved out a niche in the market as
+						the finance brand with character. Literally.
+					</p>
+					<p>Tools Used</p>
+					<ul>
+						<li>WordPress</li>
+						<li>Adobe Illustrator</li>
+						<li>SEO Tools</li>
+					</ul>
+					<p>
+						The rebrand didn't shout. It spoke clearly. And it resonated with the audiences Africa Skills wanted to
+						reach.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<img src="../../images/inkfish-case-studies-acumen-group-footer.avif" alt="" />
+
+	<style>
+		:root {
+			--brand-color-1: #00304a;
+			--brand-color-2: #00ae74;
+		}
+
+		body {
+			color: #002859;
+		}
+
+		.brand-theme {
+			background: linear-gradient(
+				to right,
+				var(--brand-color-1) 0%,
+				var(--brand-color-1) 50%,
+				var(--brand-color-2) 50%,
+				var(--brand-color-2) 100%
+			);
+			height: 100px;
+		}
+
+		.brand-gradient {
+			background: var(--brand-color-2);
+		}
+
+		.brand-logo {
+			width: min(100%, 400px);
+			margin: 0 auto;
+		}
+
+		.stars {
+			width: min(100%, 500px);
+			margin: 0 auto;
+		}
+
+		.site-shot {
+			width: min(100%, 500px);
+			margin: 0 auto;
+			mask-image: linear-gradient(black 50%, transparent);
+		}
+
+		.columns {
+			--col-size: 200px;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--col-size)), 1fr));
+			gap: 3em;
+
+			&.center-y {
+				place-items: center;
+			}
+		}
+
+		img {
+			filter: drop-shadow(10px 10px 5px #00000030);
+		}
+
+		section {
+			position: relative;
+			isolation: isolate;
+
+			&.overlay::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background: #00000020;
+				z-index: -2;
+			}
+
+			&.watermark::after {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background: url("../../images/inkfish-case-studies-acumen-group-pattern.avif") 50% 25% / 35% repeat;
+				z-index: -1;
+			}
+		}
+	</style>
+</LayoutDefault>
