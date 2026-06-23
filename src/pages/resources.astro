@@ -4,8 +4,6 @@ import Button from "../blocks/button.astro";
 
 import Book from "../assets/images/book.svg";
 import Snow from "../assets/images/snow.svg";
-import Arrow from "../assets/images/arrow.svg";
-import Arch from "../assets/images/arch.svg";
 import Wave from "../assets/images/wave.svg";
 import Circle from "../assets/images/circle.svg";
 import Splash from "../assets/images/splash.svg";
@@ -27,19 +25,19 @@ const description = "My Description";
 			</div>
 			<div class="grid-icons">
 				<div>
-					<Wave width={64} height={64} stroke="var(--c-blue)" class="wave-animate" />
+					<Wave class="animate" stroke="var(--c-blue)" width={64} height={64} />
 				</div>
 				<div>
-					<Splash width={64} height={64} fill="var(--c-yellow)" class="splash-animate" />
-					<Book width={64} height={64} stroke="var(--c-green)" class="book-animate" />
+					<Splash class="animate" fill="var(--c-yellow)" width={64} height={64} />
+					<Book class="animate" stroke="var(--c-green)" width={64} height={64} />
 				</div>
 				<div>
-					<Star width={64} height={64} fill="var(--c-red)" class="star-animate" />
-					<Circle width={64} height={64} stroke="var(--c-orange)" class="circle-animate" />
+					<Star class="animate" fill="var(--c-red)" width={64} height={64} />
+					<Circle class="animate" stroke="var(--c-orange)" width={64} height={64} />
 				</div>
 				<div>
-					<Snow width={64} height={64} stroke="var(--c-yellow)" class="snow-animate" />
-					<Pointer width={64} height={64} stroke="var(--c-blue)" class="pointer-animate" />
+					<Snow class="animate" stroke="var(--c-yellow)" width={64} height={64} />
+					<Pointer class="animate" stroke="var(--c-blue)" width={64} height={64} />
 				</div>
 			</div>
 		</div>
