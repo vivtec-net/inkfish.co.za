@@ -1,0 +1,198 @@
+---
+import LayoutDefault from "../../layouts/layoutdefault.astro";
+import Button from "../../blocks/button.astro";
+
+import Book from "../../assets/images/book.svg";
+import Snow from "../../assets/images/snow.svg";
+import Arrow from "../../assets/images/arrow.svg";
+import Arch from "../../assets/images/arch.svg";
+import Wave from "../../assets/images/wave.svg";
+import Circle from "../../assets/images/circle.svg";
+import Splash from "../../assets/images/splash.svg";
+import Pointer from "../../assets/images/pointer.svg";
+import Star from "../../assets/images/star.svg";
+
+const title = "Home";
+const description = "My Description";
+---
+
+<LayoutDefault title={title} description={description}>
+	<section class="dark">
+		<div class="wrapper banner-intro">
+			<div class="grid g-center-y">
+				<h1 class="fs-6 uppercase">Apprentice Eatery</h1>
+				<p class="fs-3">A Brand That Tastes as Good as It Looks</p>
+			</div>
+			<div class="grid-icons">
+				<div>
+					<Wave width={64} height={64} stroke="var(--c-blue)" class="wave-animate" />
+				</div>
+				<div>
+					<Splash width={64} height={64} fill="var(--c-yellow)" class="splash-animate" />
+				</div>
+				<div>
+					<Star width={64} height={64} fill="var(--c-red)" class="star-animate" />
+				</div>
+				<div>
+					<Snow width={64} height={64} stroke="var(--c-yellow)" class="snow-animate" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section style="padding-top: 0;">
+		<div class="brand-theme"></div>
+		<div class="wrapper columns center-y" style="--col-size: 300px">
+			<div>
+				<h2 class="fs-5 uppercase">The Challenge</h2>
+				<p class="bold">
+					Apprentice Eatery had the food, the location, the atmosphere, but not the online brand to match.
+				</p>
+				<p>
+					Their website wasn't reflecting their gourmet-meets-community feel, and they lacked the digital tools to drive
+					bookings, build loyalty, or reach curious foodies in George.
+				</p>
+			</div>
+			<div class="brand-logo">
+				<img src="../../images/inkfish-case-studies-apprentice-eatery-logo.avif" alt="" />
+			</div>
+		</div>
+	</section>
+	<img src="../../images/inkfish-case-studies-apprentice-eatery-laptop.avif" alt="" />
+	<section class="brand-gradient dark overlay watermark">
+		<div class="wrapper columns center-y" style="--col-size: 200px">
+			<div>
+				<img src="../../images/inkfish-case-studies-apprentice-eatery-website.avif" alt="" class="site-shot" />
+			</div>
+			<div class="grid" style="gap: 5rem">
+				<div>
+					<h2 class="fs-5 uppercase">The solution</h2>
+					<p class="bold">We cooked up a brand strategy as refined as their menu:</p>
+					<ul>
+						<li>A new brand identity, warm, local, premium, and people-first</li>
+						<li>A refreshed, mobile-responsive website with menu details, gallery, and easy booking features</li>
+						<li>
+							Social campaigns with a sensory punch, from rich flavour descriptions to trending theme days (yes, we love
+							a good food pun)
+						</li>
+						<li>Smart SEO and targeted Meta Ads to get George's foodies to their door</li>
+					</ul>
+				</div>
+				<div>
+					<h2 class="fs-5 uppercase">The result</h2>
+					<p>
+						Apprentice Eatery now looks and feels as premium online as it does in person. The restaurant gained more
+						traction on social media, increased website traffic, and, most importantly, more bookings and walk-ins. From
+						“hidden gem” to local favourite.
+					</p>
+					<p>Tools Used</p>
+					<ul>
+						<li>WordPress</li>
+						<li>Adobe Illustrator</li>
+						<li>SEO Tools</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section style="background-color: var(--brand-color-1);">
+		<div class="wrapper columns devices">
+			<img src="../../images/inkfish-case-studies-apprentice-eatery-device-1.avif" alt="" />
+			<img src="../../images/inkfish-case-studies-apprentice-eatery-device-2.avif" alt="" />
+			<img src="../../images/inkfish-case-studies-apprentice-eatery-device-3.avif" alt="" />
+		</div>
+	</section>
+
+	<style>
+		:root {
+			--brand-color-1: #122249;
+			--brand-color-2: #a84827;
+			--brand-color-3: #c59c44;
+			--brand-color-4: #af6927;
+			--brand-color-5: #fff2d8;
+			--brand-color-6: #2d2d2d;
+		}
+		body {
+			color: #002859;
+		}
+		.brand-theme {
+			background: linear-gradient(
+				to right,
+				var(--brand-color-1) calc(100% / 6 * 0),
+				var(--brand-color-1) calc(100% / 6 * 1),
+				var(--brand-color-2) calc(100% / 6 * 1),
+				var(--brand-color-2) calc(100% / 6 * 2),
+				var(--brand-color-3) calc(100% / 6 * 2),
+				var(--brand-color-3) calc(100% / 6 * 3),
+				var(--brand-color-4) calc(100% / 6 * 3),
+				var(--brand-color-4) calc(100% / 6 * 4),
+				var(--brand-color-5) calc(100% / 6 * 4),
+				var(--brand-color-5) calc(100% / 6 * 5),
+				var(--brand-color-6) calc(100% / 6 * 5),
+				var(--brand-color-6) calc(100% / 6 * 6)
+			);
+			height: 100px;
+		}
+		.brand-gradient {
+			background: linear-gradient(to bottom, var(--brand-color-3), var(--brand-color-4));
+		}
+		.brand-logo {
+			img {
+				border-radius: 50%;
+				max-height: 400px;
+				object-fit: contain;
+			}
+		}
+		.site-shot {
+			width: min(100%, 400px);
+			margin: 0 auto;
+			aspect-ratio: 1 / 2.5;
+			object-fit: cover;
+			object-position: top;
+			mask-image: linear-gradient(black 50%, transparent);
+		}
+		.columns {
+			--col-size: 200px;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--col-size)), 1fr));
+			gap: 3em;
+
+			&.center-y {
+				place-items: center;
+			}
+		}
+		img {
+			filter: drop-shadow(10px 10px 5px #00000030);
+		}
+		.devices {
+			background: url("/images/inkfish-case-studies-apprentice-eatery-pattern-2.avif") center center / contain no-repeat;
+			img {
+				aspect-ratio: 3 / 4;
+				object-fit: contain;
+				object-position: center;
+			}
+		}
+		section {
+			position: relative;
+			isolation: isolate;
+
+			&.overlay::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background: #00000020;
+				z-index: -2;
+			}
+
+			&.watermark::after {
+				content: "";
+				position: absolute;
+				inset: auto 0 0 0;
+				background: url("../../images/inkfish-case-studies-apprentice-eatery-pattern-1.avif") center top / cover
+					no-repeat;
+				z-index: -3;
+				height: 200px;
+			}
+		}
+	</style>
+</LayoutDefault>
