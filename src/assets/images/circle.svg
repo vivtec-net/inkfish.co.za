@@ -1,3 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" stroke="CanvasText" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="100">
-  <circle cx="256" cy="256" r="206" />
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	viewBox="0 0 512 512"
+	id="circle"
+	fill="none"
+	stroke="CanvasText"
+	stroke-linecap="round"
+	stroke-linejoin="bevel"
+	stroke-width="100"
+>
+	<circle cx="256" cy="256" r="206" />
+
+	<style>
+		@media (prefers-reduced-motion: no-preference) {
+			#circle.animate {
+				circle {
+					animation: loading 8s linear infinite;
+					stroke-dasharray: 1280;
+					stroke-dashoffset: 0;
+				}
+			}
+
+			@keyframes loading {
+				100% {
+					stroke-dashoffset: -2560;
+					rotate: 360deg;
+				}
+			}
+		}
+	</style>
 </svg>
