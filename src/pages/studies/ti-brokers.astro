@@ -1,0 +1,175 @@
+---
+import LayoutDefault from "../../layouts/layoutdefault.astro";
+
+import Book from "../../assets/images/book.svg";
+import Snow from "../../assets/images/snow.svg";
+import Arrow from "../../assets/images/arrow.svg";
+import Arch from "../../assets/images/arch.svg";
+import Wave from "../../assets/images/wave.svg";
+import Circle from "../../assets/images/circle.svg";
+import Splash from "../../assets/images/splash.svg";
+import Pointer from "../../assets/images/pointer.svg";
+import Star from "../../assets/images/star.svg";
+
+const title = "Home";
+const description = "My Description";
+---
+
+<LayoutDefault title={title} description={description}>
+	<section class="dark">
+		<div class="wrapper banner-intro">
+			<div class="grid g-center-y">
+				<h1 class="fs-6 uppercase">TI Brokers</h1>
+				<p class="fs-3">Insuring a Stronger Identity</p>
+			</div>
+			<div class="grid-icons">
+				<div>
+					<Wave width={64} height={64} stroke="var(--c-blue)" class="wave-animate" />
+				</div>
+				<div>
+					<Splash width={64} height={64} fill="var(--c-yellow)" class="splash-animate" />
+				</div>
+				<div>
+					<Star width={64} height={64} fill="var(--c-red)" class="star-animate" />
+				</div>
+				<div>
+					<Snow width={64} height={64} stroke="var(--c-yellow)" class="snow-animate" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section style="padding-top: 0;">
+		<div class="brand-theme"></div>
+		<div class="wrapper columns center-y" style="--col-size: 300px; --gap-size: 5em 3em">
+			<div>
+				<h2 class="fs-5 uppercase">The Challenge</h2>
+				<p class="bold">TI Brokers needed more than a fresh coat of paint; they needed a full brand reset.</p>
+				<p>
+					Their online presence didn't reflect their real-world impact, and the website and visuals were stuck in the
+					past. The insurance space is competitive, and TI needed to stand out.
+				</p>
+			</div>
+			<div class="brand-logo">
+				<img src="../../images/inkfish-case-studies-ti-brokers-brand.avif" alt="" />
+			</div>
+		</div>
+	</section>
+	<img src="../../images/inkfish-case-studies-ti-brokers-laptop.avif" alt="" />
+	<section class="brand-gradient dark">
+		<div class="wrapper columns center-y" style="--col-size: 200px">
+			<div>
+				<img src="../../images/inkfish-case-studies-ti-brokers-website.avif" alt="" class="site-shot" />
+			</div>
+			<div class="grid" style="gap: 5rem">
+				<div>
+					<h2 class="fs-5 uppercase" style="color: var(--brand-color-1);">The solution</h2>
+					<p class="bold">We didn't just design. We redefined.</p>
+					<ul>
+						<li>A new brand identity that communicates trust, clarity, and approachability</li>
+						<li>A sleek, fast, and mobile-friendly website that converts visitors into leads</li>
+						<li>
+							Seasonal and trending social content that blended industry info with timely relevance; floods, VAT
+							changes, winter risks
+						</li>
+						<li>SEO improvements to make sure they show up first when it counts</li>
+					</ul>
+				</div>
+				<div>
+					<h2 class="fs-5 uppercase" style="color: var(--brand-color-1);">The result</h2>
+					<p class="bold">
+						TI Brokers now has an identity that turns heads and earns clicks. Their online presence became stronger,
+						more strategic, and more consistent, bringing in customers who value expertise and accessibility.
+					</p>
+					<p>Tools Used</p>
+					<ul>
+						<li>WordPress</li>
+						<li>Adobe Illustrator</li>
+						<li>SEO Tools</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section style="background: var(--brand-color-1);">
+		<div class="wrapper columns">
+			<img src="../../images/inkfish-case-studies-ti-brokers-sm-1.avif" alt="" />
+			<img src="../../images/inkfish-case-studies-ti-brokers-sm-2.avif" alt="" />
+			<img src="../../images/inkfish-case-studies-ti-brokers-sm-3.avif" alt="" />
+		</div>
+	</section>
+
+	<style>
+		:root {
+			--brand-color-1: #ddba61;
+			--brand-color-2: #1a1a1a;
+			--brand-color-3: #333333;
+		}
+		body {
+			color: var(--brand-color-2);
+		}
+		.brand-theme {
+			background: linear-gradient(
+				to right,
+				var(--brand-color-1) calc(100% / 3 * 0),
+				var(--brand-color-1) calc(100% / 3 * 1),
+				var(--brand-color-2) calc(100% / 3 * 1),
+				var(--brand-color-2) calc(100% / 3 * 2),
+				var(--brand-color-3) calc(100% / 3 * 2),
+				var(--brand-color-3) calc(100% / 3 * 3)
+			);
+			height: 100px;
+		}
+		.brand-gradient {
+			background: linear-gradient(to bottom, var(--brand-color-3), var(--brand-color-3));
+		}
+		.brand-logo {
+			margin: -5rem auto -5rem;
+			mask: linear-gradient(to right, #fff 80%, transparent 95%);
+		}
+		.site-shot {
+			width: min(100%, 400px);
+			margin: 0 auto;
+			aspect-ratio: 1 / 2.5;
+			object-fit: cover;
+			object-position: top;
+			mask-image: linear-gradient(black 50%, transparent);
+		}
+		.columns {
+			--col-size: 200px;
+			--gap-size: 3em;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--col-size)), 1fr));
+			gap: var(--gap-size);
+
+			&.center-y {
+				place-items: center;
+			}
+		}
+		img {
+			filter: drop-shadow(10px 10px 5px #00000030);
+		}
+		section {
+			position: relative;
+			isolation: isolate;
+
+			&.overlay::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background: #00000020;
+				z-index: -2;
+			}
+
+			&.watermark::after {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background: url("../../images/inkfish-case-studies-africa-skills-watermark.avif") center center / cover
+					no-repeat;
+				z-index: -1;
+				filter: brightness(30%) invert(1);
+			}
+		}
+	</style>
+</LayoutDefault>
