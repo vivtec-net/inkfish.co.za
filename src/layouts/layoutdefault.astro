@@ -1,0 +1,131 @@
+---
+import Meta from "../blocks/meta.astro";
+import Link from "../blocks/link.astro";
+import Button from "../blocks/button.astro";
+
+const { pathname } = Astro.url;
+const { title, description, image = `${import.meta.env.BASE_URL}images/placeholder.webp` } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<Meta title={title} description={description} image={image} />
+	<body>
+		<header>
+			<div>
+				<label for="nav-toggle">
+					<input type="checkbox" id="nav-toggle" />
+					☰
+				</label>
+				<nav class="wrapper">
+					<a href={`${import.meta.env.BASE_URL}`} id="logo">
+						<img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="logo" width="64" height="64" />
+					</a>
+					<ul role="list" class="menu">
+						<li>
+							<Link href="" aria-current={pathname === `${import.meta.env.BASE_URL}` ? "page" : "false"}>Home</Link>
+						</li>
+						<li>
+							<Link href="about/" aria-current={pathname === `${import.meta.env.BASE_URL}about/` ? "page" : "false"}
+								>About</Link
+							>
+						</li>
+						<li>
+							<Link
+								href="services/"
+								aria-current={pathname === `${import.meta.env.BASE_URL}services/` ? "page" : "false"}>Services</Link
+							>
+						</li>
+						<li>
+							<Link
+								href="insights/"
+								aria-current={pathname === `${import.meta.env.BASE_URL}insights/` ? "page" : "false"}>Insights</Link
+							>
+						</li>
+						<li>
+							<Link href="studies/" aria-current={pathname === `${import.meta.env.BASE_URL}studies/` ? "page" : "false"}
+								>Studies</Link
+							>
+						</li>
+						<li>
+							<Link
+								href="resources/"
+								aria-current={pathname === `${import.meta.env.BASE_URL}resources/` ? "page" : "false"}>Resources</Link
+							>
+						</li>
+						<li><Button href="https://connect.inkfish.co.za/hello/" class="yellow outline round" text="Connect" /></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<slot />
+		</main>
+
+		<footer class="grid g-gap">
+			<div class="wrapper flex f-around">
+				<div style="width:min(400px, 100%); flex-grow: 1">
+					<p class="bold">
+						Subscribe for marketing tips that<br /> actually help—not fluffy spam.
+					</p>
+					<Button href="https://connect.inkfish.co.za/newsletter/" class="pink round arrow fs-1" text="Subscribe" />
+					<p class="fs-1">
+						Inkfish is a Level 2 B-BBEE agency delivering results-driven marketing across SA, EU, the US, and beyond.
+					</p>
+				</div>
+				<div class="grid g-center">
+					<img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="logo" width="64" height="64" />
+					<p class="fs-3 bold">why blend in when<br /> you can stand out?</p>
+					<div class="flex flex-start">
+						<a href="https://www.facebook.com/INKFISHdm/" target="_blank">
+							<svg
+								version="1.1"
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+								width="24"
+								height="24"
+								viewBox="0 0 16 16"
+							>
+								<path
+									fill="#fff"
+									d="M8.998 16h-2.998v-8h-2v-2.757l2-0.001-0.003-1.624c0-2.249 0.61-3.618 3.259-3.618h2.206v2.758h-1.379c-1.032 0-1.081 0.385-1.081 1.104l-0.004 1.38h2.48l-0.292 2.757-2.185 0.001-0.002 8z"
+								></path>
+							</svg>
+						</a>
+						<a href="https://www.instagram.com/inkfishdm/" target="_blank">
+							<svg
+								version="1.1"
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+								width="24"
+								height="24"
+								viewBox="0 0 16 16"
+							>
+								<path
+									fill="#fff"
+									d="M13.344 0h-10.688c-1.461 0-2.656 1.195-2.656 2.656v10.688c0 1.461 1.195 2.656 2.656 2.656h10.688c1.461 0 2.656-1.195 2.656-2.656v-10.688c0-1.461-1.195-2.656-2.656-2.656zM5.122 7h5.756c0.109 0.313 0.169 0.65 0.169 1 0 1.68-1.367 3.047-3.047 3.047s-3.047-1.367-3.047-3.047c0-0.35 0.060-0.687 0.169-1zM14 7.001v5.999c0 0.55-0.45 1-1 1h-10c-0.55 0-1-0.45-1-1v-6h1.564c-0.073 0.322-0.111 0.657-0.111 1 0 2.507 2.040 4.547 4.547 4.547s4.547-2.040 4.547-4.547c0-0.343-0.039-0.678-0.111-1l1.564 0.001zM14 3.5c0 0.275-0.225 0.5-0.5 0.5h-1c-0.275 0-0.5-0.225-0.5-0.5v-1c0-0.275 0.225-0.5 0.5-0.5h1c0.275 0 0.5 0.225 0.5 0.5v1z"
+								></path>
+							</svg>
+						</a>
+						<a href="https://za.linkedin.com/company/inkfish-design-studio" target="_blank">
+							<svg
+								version="1.1"
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+								width="24"
+								height="24"
+								viewBox="0 0 16 16"
+							>
+								<path
+									fill="#fff"
+									d="M13.313 0h-10.625c-1.478 0-2.688 1.209-2.688 2.688v10.625c0 1.478 1.209 2.688 2.688 2.688h10.625c1.478 0 2.688-1.209 2.688-2.688v-10.625c0-1.478-1.209-2.688-2.688-2.688zM6 13h-2v-7h2v7zM5 5c-0.552 0-1-0.448-1-1s0.448-1 1-1 1 0.448 1 1-0.448 1-1 1zM13 13h-2v-4c0-0.552-0.448-1-1-1s-1 0.448-1 1v4h-2v-7h2v1.242c0.412-0.567 1.043-1.242 1.75-1.242 1.243 0 2.25 1.119 2.25 2.5v4.5z"
+								></path>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
