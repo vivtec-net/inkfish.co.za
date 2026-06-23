@@ -1,0 +1,168 @@
+---
+import LayoutDefault from "../../layouts/layoutdefault.astro";
+
+import Book from "../../assets/images/book.svg";
+import Snow from "../../assets/images/snow.svg";
+import Arrow from "../../assets/images/arrow.svg";
+import Arch from "../../assets/images/arch.svg";
+import Wave from "../../assets/images/wave.svg";
+import Circle from "../../assets/images/circle.svg";
+import Splash from "../../assets/images/splash.svg";
+import Pointer from "../../assets/images/pointer.svg";
+import Star from "../../assets/images/star.svg";
+
+const title = "Home";
+const description = "My Description";
+---
+
+<LayoutDefault title={title} description={description}>
+	<section class="dark">
+		<div class="wrapper banner-intro">
+			<div class="grid g-center-y">
+				<h1 class="fs-6 uppercase">IVODA CONSULTANCY</h1>
+				<p class="fs-3">From Offline to Industry Authority</p>
+			</div>
+			<div class="grid-icons">
+				<div>
+					<Wave width={64} height={64} stroke="var(--c-blue)" class="wave-animate" />
+				</div>
+				<div>
+					<Splash width={64} height={64} fill="var(--c-yellow)" class="splash-animate" />
+				</div>
+				<div>
+					<Star width={64} height={64} fill="var(--c-red)" class="star-animate" />
+				</div>
+				<div>
+					<Snow width={64} height={64} stroke="var(--c-yellow)" class="snow-animate" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section style="padding-top: 0;">
+		<div class="brand-theme"></div>
+		<div class="wrapper columns center-y" style="--col-size: 300px">
+			<div>
+				<h2 class="fs-5 uppercase">The Challenge</h2>
+				<p>Ivoda had the expertise, the systems, and the track record, but their online presence didn't show it.</p>
+				<p>
+					No active digital presence meant missed leads, lost credibility, and zero visibility in the markets they were
+					serving. They needed a digital identity that matched their operational excellence.
+				</p>
+			</div>
+			<div class="brand-logo">
+				<img src="../../images/inkfish-case-studies-ivoda-device-combo.avif" alt="" />
+			</div>
+		</div>
+	</section>
+	<img src="../../images/inkfish-case-studies-ivoda-devices.avif" alt="" />
+	<section class="brand-gradient dark overlay watermark">
+		<div class="wrapper columns center-y" style="--col-size: 200px">
+			<div>
+				<img src="../../images/inkfish-case-studies-ivoda-website.avif" alt="" class="site-shot" />
+			</div>
+			<div class="grid" style="gap: 5rem">
+				<div>
+					<h2 class="fs-5 uppercase">The solution</h2>
+					<p>We applied our full consultancy toolkit to help Ivoda show up where it matters:</p>
+					<ul>
+						<li>A crisp, corporate website that clearly outlines Ivoda's value across industries</li>
+						<li>SEO implementation and strategy to improve search rankings and drive relevant traffic</li>
+						<li>
+							Paid social and Google Ads that spoke to real business pain points, inefficiencies, staffing bottlenecks,
+							compliance
+						</li>
+						<li>A refined brand look that added professionalism without losing personality</li>
+					</ul>
+				</div>
+				<div>
+					<h2 class="fs-5 uppercase">The result</h2>
+					<p>
+						Ivoda went from invisible to indispensable in the eyes of potential partners. With better traffic, improved
+						digital authority, and engaging, solution-focused content, Ivoda started drawing in new clients who were now
+						finding them, not just through referrals, but online.
+					</p>
+					<p>Tools Used</p>
+					<ul>
+						<li>WordPress</li>
+						<li>Adobe Illustrator</li>
+						<li>SEO Tools</li>
+						<li>Meta Ads</li>
+						<li>Google Ads</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<img src="../../images/inkfish-case-studies-ivoda-footer.avif" alt="" />
+
+	<style>
+		:root {
+			--brand-color-1: #031721;
+			--brand-color-2: #094133;
+			--brand-color-3: #05886e;
+			--brand-color-4: #71b356;
+		}
+		body {
+			color: var(--brand-color-1);
+		}
+		.brand-theme {
+			background: linear-gradient(
+				to right,
+				var(--brand-color-1) 0%,
+				var(--brand-color-1) 25%,
+				var(--brand-color-2) 25%,
+				var(--brand-color-2) 50%,
+				var(--brand-color-3) 50%,
+				var(--brand-color-3) 75%,
+				var(--brand-color-4) 75%,
+				var(--brand-color-4) 100%
+			);
+			height: 100px;
+		}
+		.brand-gradient {
+			background: linear-gradient(to bottom, var(--brand-color-3), var(--brand-color-1));
+		}
+		.site-shot {
+			width: min(100%, 400px);
+			margin: 0 auto;
+			aspect-ratio: 1 / 2.5;
+			object-fit: cover;
+			object-position: top;
+			mask-image: linear-gradient(black 85%, transparent);
+		}
+		.columns {
+			--col-size: 200px;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--col-size)), 1fr));
+			gap: 3em;
+
+			&.center-y {
+				place-items: center;
+			}
+		}
+		img {
+			filter: drop-shadow(10px 10px 5px #00000030);
+		}
+		section {
+			position: relative;
+			isolation: isolate;
+
+			&.overlay::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background: #00000020;
+				z-index: -2;
+			}
+
+			&.watermark::after {
+				content: "";
+				position: absolute;
+				inset: 0 50% 0 0;
+				background: url("../../images/inkfish-case-studies-ivoda-watermark.avif") top left / contain no-repeat;
+				z-index: -1;
+			}
+		}
+	</style>
+</LayoutDefault>
