@@ -1,0 +1,211 @@
+---
+import { Image } from "astro:assets";
+
+import LayoutDefault from "../layouts/layoutdefault.astro";
+
+import Button from "../blocks/button.astro";
+
+import Book from "../assets/images/book.svg";
+import Snow from "../assets/images/snow.svg";
+import Arrow from "../assets/images/arrow.svg";
+import Arch from "../assets/images/arch.svg";
+import Wave from "../assets/images/wave.svg";
+import Circle from "../assets/images/circle.svg";
+import Splash from "../assets/images/splash.svg";
+import Pointer from "../assets/images/pointer.svg";
+import Star from "../assets/images/star.svg";
+
+const title = "Home";
+const description = "My Description";
+---
+
+<LayoutDefault title={title} description={description}>
+	<section class="dark">
+		<div class="wrapper banner-intro">
+			<div class="grid g-center-y">
+				<h1 class="fs-6">
+					A Day at Inkfish <br />
+					<span class="uppercase" style="color:var(--c-yellow)">Strategy</span>
+				</h1>
+			</div>
+			<div class="grid-icons">
+				<div>
+					<Wave width={64} height={64} stroke="var(--c-blue)" class="wave-animate" />
+				</div>
+				<div>
+					<Splash width={64} height={64} fill="var(--c-yellow)" class="splash-animate" />
+					<Book width={64} height={64} stroke="var(--c-green)" class="book-animate" />
+				</div>
+				<div>
+					<Star width={64} height={64} fill="var(--c-red)" class="star-animate" />
+					<Circle width={64} height={64} stroke="var(--c-orange)" class="circle-animate" />
+				</div>
+				<div>
+					<Snow width={64} height={64} stroke="var(--c-yellow)" class="snow-animate" />
+					<Pointer width={64} height={64} stroke="var(--c-blue)" class="pointer-animate" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="wrapper grid g-gap narrow center">
+			<h2 class="fs-5">Who We Are</h2>
+			<p>
+				We're Inkfish, a boutique digital marketing agency solving real business problems since 2004. We're small by
+				design. Sharp, agile, and all in on your success.
+			</p>
+			<h3 class="fs-4 bold uppercase">
+				<span class="c blue">We're not bloated. </span>
+				<span class="c orange">We're not stitched together</span>
+			</h3>
+			<p>
+				We're a real team who show up like in-house partners for strategy, content, web, and results. We treat your
+				brand like it's our own. Because if you don't grow, we don't either.
+			</p>
+		</div>
+		<div class="tilt edge move gb center uppercase fs-5 bold balance c white">You want growth. You want clarity.</div>
+	</section>
+	<section>
+		<div class="wrapper">
+			<div class="grid-cards">
+				<div class="card">
+					<div>
+						<Star width={64} height={64} fill="var(--c-yellow)" class="star-animate bg orange" />
+						<Pointer width={64} height={64} stroke="var(--c-yellow)" class="bg blue pointer-animate" />
+					</div>
+					<div>
+						<h3>
+							<span class="pill c blue br-a fs-4">Our Mission</span>
+						</h3>
+						<p>
+							To build standout brands through strategy-first marketing that's clear, creative, and built to convert.
+						</p>
+					</div>
+				</div>
+				<div class="card">
+					<div>
+						<Splash width={64} height={64} fill="var(--c-orange)" class="bg yellow splash-animate" />
+						<Snow width={64} height={64} stroke="var(--c-blue)" class="bg green snow-animate" />
+					</div>
+					<div>
+						<h3>
+							<span class="pill c blue br-a fs-4">Our Vision</span>
+						</h3>
+						<p>
+							We see a future where our clients don't just exist online. They own their space. Where great brands are
+							easy to find, easy to trust, and impossible to ignore.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="bg blue dark">
+		<div class="wrapper narrow grid g-gap g-center">
+			<h2 class="fs-4">Why Clients Choose Inkfish</h2>
+			<ul role="list" class="list-custom">
+				<li>We're fast without being sloppy</li>
+				<li>We give honest feedback, not “yes-man” fluff</li>
+				<li>You'll always know who's managing your account</li>
+				<li>We bring real ROI, not just pretty reports</li>
+				<li>We're small enough to care and sharp enough to scale</li>
+			</ul>
+		</div>
+	</section>
+	<section class="dark">
+		<div class="wrapper grid g-gap g-center center">
+			<h2 class="fs-4">What We Do</h2>
+			<div class="serve">
+				<div class="c yellow">BRANDING</div>
+				<div>that's more than just a logo. It's a positioning tool.</div>
+				<div class="c orange">WEBSITES</div>
+				<div>that convert, not confuse.</div>
+				<div class="c pink">CONTENT</div>
+				<div>that builds trust and brings leads.</div>
+				<div class="c red">ADS</div>
+				<div>that don't just get seen. They get clicked.</div>
+				<div class="c green">CAMPAIGNS</div>
+				<div>that pull it all together and move the bottom line.</div>
+			</div>
+			<div>
+				<p>We keep things clear, creative, and custom.</p>
+				<p class="fs-3 bold uppercase">No bloated decks. No cookie-cutter plans</p>
+			</div>
+		</div>
+	</section>
+	<section class="dark">
+		<div class="wrapper grid g-gap g-center center">
+			<h2 class="fs-4">Meet the team</h2>
+			<p>(Avatars incoming. Because we're not robots, but we are kinda quirky)</p>
+			<ul role="list" class="avatars">
+				<li>
+					<img src="../images/avatar-retha.avif" alt="" />
+					<span>Retha</span>
+					<span>CEO & Marketing Strategy</span>
+				</li>
+				<li>
+					<img src="../images/avatar-bern.avif" alt="" />
+					<span>Bernelee</span>
+					<span>COO & Marketing Manager</span>
+				</li>
+				<li>
+					<img src="../images/avatar-limi.avif" alt="" />
+					<span>Lizemari</span>
+					<span>Operations Manager, Designer & Copywriter</span>
+				</li>
+				<li>
+					<img src="../images/avatar-kim.avif" alt="" />
+					<span>Kimberly</span>
+					<span>Designer</span>
+				</li>
+				<li>
+					<img src="../images/avatar-celine.avif" alt="" />
+					<span>Celine</span>
+					<span>Designer</span>
+				</li>
+				<li>
+					<img src="../images/avatar-gerhard.avif" alt="" />
+					<span>Gerhard</span>
+					<span>SEO Analyst</span>
+				</li>
+				<li>
+					<img src="../images/avatar-shane.avif" alt="" />
+					<span>Shane</span>
+					<span>Web Developer</span>
+				</li>
+				<li>
+					<img src="../images/avatar-stefan.avif" alt="" />
+					<span>Stefan</span>
+					<span>Web Developer</span>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section class="bg green dark">
+		<div class="wrapper narrow center grid g-gap">
+			<h2 class="fs-4">Our Culture</h2>
+			<p>
+				We believe in being good humans first. Yes, we care about KPIs, but we also care about boundaries, birthdays,
+				and taking lunch away from your laptop.
+			</p>
+			<div class="fs-3 flex f-center">
+				<span class="pill br-a bg blue">We're organised.</span>
+				<span class="pill br-e yellow">We're responsive.</span>
+				<span class="pill br-r bg pink">We're human.</span>
+			</div>
+		</div>
+	</section>
+	<section class="dark">
+		<div class="wrapper banner-intro" style="gap: 2em">
+			<div class="grid g-gap g-start-x">
+				<p>Ready to work with a marketing team that actually gets it?</p>
+				<h2 class="fs-5 balance">Let's build something <span class="c yellow">brilliant</span> together.</h2>
+				<Button href="https://connect.inkfish.co.za/hello/" class="yellow round arrow" text="Let's Talk" />
+			</div>
+			<div>
+				<img src="../images/handshake.avif" alt="handshake" />
+			</div>
+		</div>
+	</section>
+</LayoutDefault>
