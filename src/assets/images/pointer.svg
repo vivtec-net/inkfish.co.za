@@ -1,3 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="pointer" fill="none" stroke="CanvasText" stroke-linecap="round" stroke-linejoin="round" stroke-width="100">
-  <path d="m50 50 171 206L50 462M291 50l171 206-171 206"/>
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	viewBox="0 0 512 512"
+	fill="none"
+	stroke="CanvasText"
+	stroke-linecap="round"
+	stroke-linejoin="round"
+	stroke-width="100"
+	id="pointer"
+>
+	<path d="m50 50 171 206L50 462M291 50l171 206-171 206" />
+
+	<style>
+		@media (prefers-reduced-motion: no-preference) {
+			#pointer.animate {
+				path {
+					animation: pointer 2s ease-in-out infinite alternate;
+				}
+			}
+
+			@keyframes pointer {
+				to {
+					d: path("m50 462 171-206L50 50m241 412 171-206L291 50");
+				}
+			}
+		}
+	</style>
 </svg>
