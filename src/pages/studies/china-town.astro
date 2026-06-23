@@ -1,0 +1,185 @@
+---
+import LayoutDefault from "../../layouts/layoutdefault.astro";
+import Button from "../../blocks/button.astro";
+
+import Book from "../../assets/images/book.svg";
+import Snow from "../../assets/images/snow.svg";
+import Arrow from "../../assets/images/arrow.svg";
+import Arch from "../../assets/images/arch.svg";
+import Wave from "../../assets/images/wave.svg";
+import Circle from "../../assets/images/circle.svg";
+import Splash from "../../assets/images/splash.svg";
+import Pointer from "../../assets/images/pointer.svg";
+import Star from "../../assets/images/star.svg";
+
+const title = "Home";
+const description = "My Description";
+---
+
+<LayoutDefault title={title} description={description}>
+	<section class="dark">
+		<div class="wrapper banner-intro">
+			<div class="grid g-center-y">
+				<h1 class="fs-6 uppercase">China Town</h1>
+				<p class="fs-3"><span class="bold">Outdated to Unmissable:</span> <br />The Digital Makeover</p>
+			</div>
+			<div class="grid-icons">
+				<div>
+					<Wave width={64} height={64} stroke="var(--c-blue)" class="wave-animate" />
+				</div>
+				<div>
+					<Splash width={64} height={64} fill="var(--c-yellow)" class="splash-animate" />
+				</div>
+				<div>
+					<Star width={64} height={64} fill="var(--c-red)" class="star-animate" />
+				</div>
+				<div>
+					<Snow width={64} height={64} stroke="var(--c-yellow)" class="snow-animate" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section style="padding-top: 0;">
+		<div class="brand-theme"></div>
+		<div class="wrapper columns center-y" style="--col-size: 300px">
+			<div>
+				<h2 class="fs-5 uppercase">The Challenge</h2>
+				<p class="bold">China Town was a shopper's playground in real life, but online?</p>
+				<p>
+					The experience didn't match the magic. With an outdated website and quiet social channels, the brand wasn't
+					making the most of its seasonal hype or themed events.
+				</p>
+			</div>
+			<div class="brand-logo">
+				<img src="../../images/inkfish-case-studies-china-town-device-combo.avif" alt="" />
+			</div>
+		</div>
+	</section>
+	<img src="../../images/inkfish-case-studies-china-town-devices.avif" alt="" />
+	<section class="brand-gradient dark pattern" style="background: var(--brand-color-1);">
+		<div class="wrapper columns center-y" style="--col-size: 200px">
+			<div>
+				<img src="../../images/inkfish-case-studies-china-town-website.avif" alt="" class="site-shot" />
+			</div>
+			<div class="grid" style="gap: 5rem">
+				<div>
+					<h2 class="fs-5 uppercase" style="color: var(--brand-color-3);">The solution</h2>
+					<p class="bold">We flipped the script by creating:</p>
+					<ul>
+						<li>A bright, modern website that reflects the energy and variety of their stores</li>
+						<li>
+							Bold, themed social campaigns from “Star Wars Week” to winter must-haves, that made shoppers stop, smile,
+							and shop
+						</li>
+						<li>Targeted Meta Ads and smart SEO to drive traffic where it mattered: in-store and online</li>
+					</ul>
+					<p>
+						<span class="bold">We tapped into what makes China Town so loved:</span> affordability, family-fun vibes, and
+						product variety. Then we made that digital.
+					</p>
+				</div>
+				<div>
+					<h2 class="fs-5 uppercase" style="color: var(--brand-color-3);">The result</h2>
+					<p>
+						A noticeable jump in social media followers, more comments and engagement, and a steady rise in both store
+						visits and website clicks. Suddenly, China Town wasn't just a place to shop; it became part of people's
+						weekend plans again.
+					</p>
+					<p>Tools Used</p>
+					<ul>
+						<li>WordPress</li>
+						<li>Adobe Illustrator</li>
+						<li>SEO Tools</li>
+						<li>Meta Ads</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="watermark" style="background-color: var(--brand-color-2);">
+		<div class="wrapper columns center-x">
+			<img src="../../images/inkfish-case-studies-china-town-device-1.avif" alt="" style="width: min(90%, 250px);" />
+			<img src="../../images/inkfish-case-studies-china-town-device-2.avif" alt="" style="width: min(90%, 250px);" />
+			<img src="../../images/inkfish-case-studies-china-town-device-3.avif" alt="" style="width: min(90%, 250px);" />
+		</div>
+	</section>
+
+	<style>
+		:root {
+			--brand-color-1: #431f2b;
+			--brand-color-2: #d92427;
+			--brand-color-3: #fef200;
+			--brand-color-4: #fffaf0;
+		}
+		body {
+			color: var(--brand-color-1);
+		}
+		.brand-theme {
+			background: linear-gradient(
+				to right,
+				var(--brand-color-1) 0%,
+				var(--brand-color-1) 25%,
+				var(--brand-color-2) 25%,
+				var(--brand-color-2) 50%,
+				var(--brand-color-3) 50%,
+				var(--brand-color-3) 75%,
+				var(--brand-color-4) 75%,
+				var(--brand-color-4) 100%
+			);
+			height: 100px;
+		}
+		.brand-gradient {
+			background: linear-gradient(to bottom, var(--brand-color-1), var(--brand-color-1));
+		}
+		.brand-logo {
+		}
+		.site-shot {
+			width: min(100%, 400px);
+			margin: 0 auto;
+			aspect-ratio: 1 / 2.5;
+			object-fit: cover;
+			object-position: top;
+			mask-image: linear-gradient(black 50%, transparent);
+		}
+		.columns {
+			--col-size: 200px;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--col-size)), 1fr));
+			gap: 3em;
+
+			&.center-y {
+				place-items: center;
+			}
+
+			&.center-x {
+				justify-items: center;
+			}
+		}
+
+		img {
+			filter: drop-shadow(-10px 10px 10px #00000050);
+		}
+
+		section {
+			position: relative;
+			isolation: isolate;
+
+			&.watermark::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background: url("../../images/inkfish-case-studies-china-town-watermark.avif") center 100% / 200px repeat-x;
+				z-index: -1;
+			}
+
+			&.pattern::after {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background: url("/images/inkfish-case-studies-china-town-pattern.avif") center center / 40%;
+				z-index: -1;
+			}
+		}
+	</style>
+</LayoutDefault>
