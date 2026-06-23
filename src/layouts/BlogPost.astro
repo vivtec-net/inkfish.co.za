@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+
+import LayoutDefault from "../layouts/layoutdefault.astro";
+import FormattedDate from "../blocks/date.astro";
+
+const { title, description, pubDate, updatedDate, image } = Astro.props;
+---
+
+<LayoutDefault title={title} description={description} image={image.src}>
+	<section class="blog">
+		<article class="grid g-gap">
+			<div class="hero-image">
+				<Image src={image} alt="" width="1020" height="510" />
+			</div>
+			<div class="prose">
+				<div class="title">
+					<div class="date">
+						<FormattedDate date={pubDate} />
+						{
+							updatedDate && (
+								<div class="last-updated-on">
+									Last updated on <FormattedDate date={updatedDate} />
+								</div>
+							)
+						}
+					</div>
+					<h1>{title}</h1>
+					<hr />
+				</div>
+				<slot />
+			</div>
+		</article>
+	</section>
+</LayoutDefault>
