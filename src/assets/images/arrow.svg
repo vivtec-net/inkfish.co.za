@@ -1,7 +1,7 @@
 <svg
 	xmlns="http://www.w3.org/2000/svg"
 	viewBox="0 0 512 512"
-	class="arrow-icons"
+	id="arrow"
 	fill="none"
 	stroke="CanvasText"
 	stroke-linecap="round"
@@ -10,4 +10,34 @@
 	<path d="M55 457 457 55" />
 	<path d="M55 55h402" />
 	<path d="M457 55v402" />
+
+	<style>
+		@media (prefers-reduced-motion: no-preference) {
+			#arrow.animate {
+				path {
+					transform-box: view-box;
+					transform-origin: calc(100% - 60px) calc(0% + 60px);
+					animation: 1.5s ease-in-out infinite alternate;
+				}
+
+				path:nth-of-type(2) {
+					animation-name: arrow-r;
+				}
+				path:nth-of-type(3) {
+					animation-name: arrow-f;
+				}
+			}
+
+			@keyframes arrow-f {
+				to {
+					rotate: 15deg;
+				}
+			}
+			@keyframes arrow-r {
+				to {
+					rotate: -15deg;
+				}
+			}
+		}
+	</style>
 </svg>
