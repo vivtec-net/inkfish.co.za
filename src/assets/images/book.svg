@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" stroke="CanvasText" stroke-linecap="round" stroke-width="60">
+  <path d="M482 256v226"/>
+  <path d="M482 256 369 452"/>
+  <path d="M482 256 286 369"/>
+  <path d="M482 256H255"/>
+  <path d="M482 256 286 143"/>
+  <path d="M482 256 369 60"/>
+  <path d="M482 256V30"/>
+	<style>
+		@media (prefers-reduced-motion: no-preference) {
+			.book-animate {
+
+				path {
+					transform-origin: calc(100% - 30px) 50%;
+					animation: turn 4s ease-in-out infinite alternate both;
+				}
+
+				path:nth-of-type(1) {
+					animation-delay: 0.3s;
+				}
+
+				path:nth-of-type(2) {
+					animation-delay: 0.6s;
+				}
+				
+				path:nth-of-type(3) {
+					animation-delay: 0.9s;
+				}
+
+				path:nth-of-type(4) {
+					animation-play-state: paused;
+				}
+
+				path:nth-of-type(5) {
+					animation-name: turn-r;
+					animation-delay: 0.9s;
+				}
+
+				path:nth-of-type(6) {
+					animation-name: turn-r;
+					animation-delay: 0.6s;
+				}
+
+				path:nth-of-type(7) {
+					animation-name: turn-r;
+					animation-delay: 0.3s;
+				}
+			}
+		}
+	</style>
+</svg>
