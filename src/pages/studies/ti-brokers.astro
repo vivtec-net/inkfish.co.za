@@ -1,14 +1,9 @@
 ---
 import LayoutDefault from "../../layouts/layoutdefault.astro";
 
-import Book from "../../assets/images/book.svg";
 import Snow from "../../assets/images/snow.svg";
-import Arrow from "../../assets/images/arrow.svg";
-import Arch from "../../assets/images/arch.svg";
 import Wave from "../../assets/images/wave.svg";
-import Circle from "../../assets/images/circle.svg";
 import Splash from "../../assets/images/splash.svg";
-import Pointer from "../../assets/images/pointer.svg";
 import Star from "../../assets/images/star.svg";
 
 const title = "Home";
@@ -24,16 +19,16 @@ const description = "My Description";
 			</div>
 			<div class="grid-icons">
 				<div>
-					<Wave width={64} height={64} stroke="var(--c-blue)" class="wave-animate" />
+					<Wave class="animate" stroke="var(--c-blue)" width={64} height={64} />
 				</div>
 				<div>
-					<Splash width={64} height={64} fill="var(--c-yellow)" class="splash-animate" />
+					<Splash class="animate" fill="var(--c-yellow)" width={64} height={64} />
 				</div>
 				<div>
-					<Star width={64} height={64} fill="var(--c-red)" class="star-animate" />
+					<Star class="animate" fill="var(--c-red)" width={64} height={64} />
 				</div>
 				<div>
-					<Snow width={64} height={64} stroke="var(--c-yellow)" class="snow-animate" />
+					<Snow class="animate" stroke="var(--c-yellow)" width={64} height={64} />
 				</div>
 			</div>
 		</div>
