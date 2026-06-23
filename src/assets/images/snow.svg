@@ -1,0 +1,10 @@
+<svg class="snow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="none" stroke="CanvasText" stroke-linecap="round" stroke-linejoin="round" stroke-width="30">
+  <path d="M512 15v994"/>
+  <path d="M702 53 322 971"/>
+  <path d="M863 161 161 863"/>
+  <path d="M974 328 50 696"/>
+  <path d="M1009 512H15"/>
+  <path d="M975 692 49 332"/>
+  <path d="M863 863 161 161"/>
+  <path d="M697 973 327 51"/>
+</svg>
