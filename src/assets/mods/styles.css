@@ -1,4 +1,4 @@
-@layer reset, base, layouts, components, utilties;
+@layer reset, base, layouts, blocks, utilties;
 
 @layer reset {
 	:root {
@@ -290,7 +290,7 @@
 	}
 }
 
-@layer components {
+@layer blocks {
 	.reviews {
 		padding-block: 30px;
 		mask: linear-gradient(to bottom, transparent, white calc(0% + 30px), white calc(100% - 30px), transparent);
@@ -328,6 +328,10 @@
 		to {
 			translate: 0% -100%;
 		}
+	}
+
+	.icons svg {
+		inline-size: 100%;
 	}
 
 	header {
@@ -919,240 +923,6 @@
 			}
 		}
 	}
-
-	@media (prefers-reduced-motion: no-preference) {
-		.snow-animate {
-			path {
-				animation: spin 4s ease-in-out infinite;
-			}
-			path:nth-of-type(1) {
-				animation-delay: 0s;
-			}
-			path:nth-of-type(2) {
-				animation-delay: 0.15s;
-			}
-			path:nth-of-type(3) {
-				animation-delay: 0.3s;
-			}
-			path:nth-of-type(4) {
-				animation-delay: 0.45s;
-			}
-			path:nth-of-type(5) {
-				animation-delay: 0.6s;
-			}
-			path:nth-of-type(6) {
-				animation-delay: 0.75s;
-			}
-			path:nth-of-type(7) {
-				animation-delay: 0.95s;
-			}
-			path:nth-of-type(8) {
-				animation-delay: 1.1s;
-			}
-		}
-
-		@keyframes spin {
-			to {
-				rotate: 180deg;
-			}
-		}
-	}
-
-	@media (prefers-reduced-motion: no-preference) {
-		.book-animate {
-			path {
-				transform-origin: calc(100% - 30px) 50%;
-				animation: turn 4s ease-in-out infinite alternate both;
-			}
-
-			path:nth-of-type(1) {
-				animation-delay: 0.3s;
-			}
-
-			path:nth-of-type(2) {
-				animation-delay: 0.6s;
-			}
-
-			path:nth-of-type(3) {
-				animation-delay: 0.9s;
-			}
-
-			path:nth-of-type(4) {
-				animation-play-state: paused;
-			}
-
-			path:nth-of-type(5) {
-				animation-name: turn-r;
-				animation-delay: 0.9s;
-			}
-
-			path:nth-of-type(6) {
-				animation-name: turn-r;
-				animation-delay: 0.6s;
-			}
-
-			path:nth-of-type(7) {
-				animation-name: turn-r;
-				animation-delay: 0.3s;
-			}
-		}
-	}
-
-	@keyframes turn {
-		to {
-			rotate: 120deg;
-		}
-	}
-	@keyframes turn-r {
-		to {
-			rotate: -120deg;
-		}
-	}
-
-	@media (prefers-reduced-motion: no-preference) {
-		.arrow-animate {
-			path {
-				transform-origin: calc(100% - 60px) calc(0% + 60px);
-				animation: 1.5s ease-in-out infinite alternate;
-			}
-
-			path:nth-of-type(2) {
-				animation-name: arrow-r;
-			}
-			path:nth-of-type(3) {
-				animation-name: arrow-f;
-			}
-		}
-
-		@keyframes arrow-f {
-			to {
-				rotate: 15deg;
-			}
-		}
-		@keyframes arrow-r {
-			to {
-				rotate: -15deg;
-			}
-		}
-	}
-
-	@media (prefers-reduced-motion: no-preference) {
-		.arch-animate {
-			path {
-				animation: draw 2s linear infinite;
-				stroke-dasharray: 500;
-				stroke-dashoffset: 750;
-			}
-		}
-
-		@keyframes draw {
-			to {
-				stroke-dashoffset: -250;
-			}
-		}
-	}
-
-	@media (prefers-reduced-motion: no-preference) {
-		.wave-animate {
-			path {
-				animation: wavy-1 3s ease-in-out infinite alternate;
-				stroke-dasharray: 400;
-			}
-
-			path:nth-of-type(2) {
-				animation-name: wavy-2;
-				stroke-dasharray: 400;
-			}
-		}
-
-		@keyframes wavy-1 {
-			to {
-				d: path("M50 160S50 50 157 50s101 110 203 110S462 50 462 50");
-			}
-		}
-		@keyframes wavy-2 {
-			to {
-				d: path("M462 352s0 110-107 110-101-110-203-110S50 462 50 462");
-			}
-		}
-	}
-
-	@media (prefers-reduced-motion: no-preference) {
-		.circle-animate {
-			circle {
-				animation: loading 8s linear infinite;
-				stroke-dasharray: 1280;
-				stroke-dashoffset: 0;
-			}
-		}
-
-		@keyframes loading {
-			100% {
-				stroke-dashoffset: -2560;
-				rotate: 360deg;
-			}
-		}
-	}
-
-	@media (prefers-reduced-motion: no-preference) {
-		.splash-animate {
-			path {
-				animation: splash 1.5s ease-in-out infinite alternate;
-			}
-			path:nth-of-type(1) {
-				animation-delay: -0.5s;
-			}
-			path:nth-of-type(2) {
-				animation-delay: -1s;
-			}
-			path:nth-of-type(3) {
-				animation-delay: -1.5s;
-			}
-			path:nth-of-type(4) {
-				animation-delay: -2s;
-			}
-			path:nth-of-type(5) {
-				animation-delay: -2.5s;
-			}
-			path:nth-of-type(6) {
-				animation-delay: -3s;
-			}
-		}
-
-		@keyframes splash {
-			to {
-				scale: 0.75;
-			}
-		}
-	}
-
-	@media (prefers-reduced-motion: no-preference) {
-		.pointer-animate {
-			path {
-				animation: pointer 2s ease-in-out infinite alternate;
-			}
-		}
-
-		@keyframes pointer {
-			to {
-				d: path("m50 462 171-206L50 50m241 412 171-206L291 50");
-			}
-		}
-	}
-
-	@media (prefers-reduced-motion: no-preference) {
-		.star-animate {
-			path {
-				animation: rotate 8s linear infinite;
-			}
-		}
-	}
-
-	@keyframes rotate {
-		to {
-			rotate: 360deg;
-		}
-	}
 }
 
 @layer utilities {
@@ -1187,7 +957,7 @@
 			display: inline-block;
 			width: 30px;
 			height: 30px;
-			background: url("/images/splash.svg") center / contain no-repeat;
+			background: url("/src/assets/images/splash.svg") center / contain no-repeat;
 			filter: brightness(0) saturate(100%) invert(48%) sepia(98%) saturate(1302%) hue-rotate(347deg) brightness(105%)
 				contrast(80%);
 			animation: rotate 10s linear 0s infinite normal none;
@@ -1533,47 +1303,5 @@
 
 	span:last-of-type {
 		font-size: var(--fs-1);
-	}
-}
-
-[popovertarget] {
-	background: var(--c-white);
-	color: var(--c-black);
-	border-radius: 99px;
-	border: unset;
-	padding: 1em 2em;
-	font-weight: bold;
-}
-
-#my-popover {
-	margin: auto;
-	width: min(800px, 90%);
-	aspect-ratio: 16 / 9;
-	border: unset;
-	transition: all 0.7s allow-discrete;
-	opacity: 0;
-
-	iframe {
-		height: 100%;
-		border: unset;
-		display: none;
-		content-visibility: hidden;
-	}
-
-	&:popover-open {
-		opacity: 1;
-
-		iframe {
-			height: 100%;
-			border: unset;
-			display: block;
-			content-visibility: visible;
-		}
-
-		@starting-style {
-			&:popover-open {
-				opacity: 0;
-			}
-		}
 	}
 }
