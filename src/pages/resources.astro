@@ -1,0 +1,96 @@
+---
+import LayoutDefault from "../layouts/layoutdefault.astro";
+import Button from "../blocks/button.astro";
+
+import Book from "../assets/images/book.svg";
+import Snow from "../assets/images/snow.svg";
+import Arrow from "../assets/images/arrow.svg";
+import Arch from "../assets/images/arch.svg";
+import Wave from "../assets/images/wave.svg";
+import Circle from "../assets/images/circle.svg";
+import Splash from "../assets/images/splash.svg";
+import Pointer from "../assets/images/pointer.svg";
+import Star from "../assets/images/star.svg";
+
+const title = "Home";
+const description = "My Description";
+---
+
+<LayoutDefault title={title} description={description}>
+	<section class="dark">
+		<div class="wrapper banner-intro">
+			<div class="grid g-center-y">
+				<h1 class="fs-6 uppercase">
+					Did someone say ... <br />
+					<span class="uppercase" style="color:var(--c-pink)">Freebies</span>
+				</h1>
+			</div>
+			<div class="grid-icons">
+				<div>
+					<Wave width={64} height={64} stroke="var(--c-blue)" class="wave-animate" />
+				</div>
+				<div>
+					<Splash width={64} height={64} fill="var(--c-yellow)" class="splash-animate" />
+					<Book width={64} height={64} stroke="var(--c-green)" class="book-animate" />
+				</div>
+				<div>
+					<Star width={64} height={64} fill="var(--c-red)" class="star-animate" />
+					<Circle width={64} height={64} stroke="var(--c-orange)" class="circle-animate" />
+				</div>
+				<div>
+					<Snow width={64} height={64} stroke="var(--c-yellow)" class="snow-animate" />
+					<Pointer width={64} height={64} stroke="var(--c-blue)" class="pointer-animate" />
+				</div>
+			</div>
+		</div>
+		<div class="tilt edge move pr center uppercase fs-3 bold balance">&nbsp;</div>
+	</section>
+
+	<section style="background-color: white;">
+		<div class="wrapper grid g-gap narrow g-center-x center">
+			<h2 class="fs-5 uppercase">A little something to make your marketing smarter</h2>
+			<p>
+				We don't believe in gatekeeping great strategy. That's why we created a freebie packed with value, real tips,
+				tools, and templates we actually use at Inkfish.
+			</p>
+			<p>
+				Whether you're a growing brand or just want to get your ducks in a row before outsourcing, this free resource is
+				here to help you move faster and market better.
+			</p>
+			<div>
+				<p class="uppercase bold fs-4">
+					<span class="c blue">Ready to take it for a spin?</span><br />
+					<span class="c red">Go on. It's free (and fabulous).</span>
+				</p>
+			</div>
+			<Button href="https://connect.inkfish.co.za/branding-checklist-2" class="blue round arrow" text="Free Download" />
+		</div>
+	</section>
+
+	<section>
+		<div class="wrapper grid g-gap narrow g-center-x center">
+			<h2 class="fs-5 uppercase">Inkfish web audit from R750</h2>
+			<p>
+				Ready to chart a course for a smoother digital voyage? At Inkfish Digital Marketing, we've got the spyglass to
+				help you navigate your online ship. Our website audit is like a compass that guides you to hidden treasures in
+				the digital world.
+			</p>
+			<Button href="https://connect.inkfish.co.za/website-audit/" class="green round arrow" text="Yes Please" />
+		</div>
+	</section>
+
+	<section class="dark">
+		<div class="wrapper banner-intro" style="gap: 2em">
+			<div class="grid g-gap g-start-x">
+				<h2 class="fs-5 balance">
+					<span class="c pink">Found something useful?</span> There's more where that came from.
+				</h2>
+				<p>Let's talk strategy, ideas, or whatever's next for your brand.</p>
+				<Button href="https://connect.inkfish.co.za/hello/" class="pink round arrow" text="Book a FREE strategy call" />
+			</div>
+			<div>
+				<img src="../images/handshake.avif" alt="handshake" />
+			</div>
+		</div>
+	</section>
+</LayoutDefault>
