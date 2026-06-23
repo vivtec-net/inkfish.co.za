@@ -1,0 +1,140 @@
+---
+import LayoutDefault from "../layouts/layoutdefault.astro";
+import Button from "../blocks/button.astro";
+import Link from "../blocks/link.astro";
+import { Image } from "astro:assets";
+
+import africaSkills from "../assets/images/studies-africa-skills.avif";
+import chinaTown from "../assets/images/studies-china-town.avif";
+import apprenticeEatery from "../assets/images/studies-apprentice-eatery.avif";
+import ivoda from "../assets/images/studies-ivoda.avif";
+import acumenGroup from "../assets/images/studies-acumen-group.avif";
+import tiBrokers from "../assets/images/studies-ti-brokers.avif";
+
+import Book from "../assets/images/book.svg";
+import Snow from "../assets/images/snow.svg";
+import Arrow from "../assets/images/arrow.svg";
+import Arch from "../assets/images/arch.svg";
+import Wave from "../assets/images/wave.svg";
+import Circle from "../assets/images/circle.svg";
+import Splash from "../assets/images/splash.svg";
+import Pointer from "../assets/images/pointer.svg";
+import Star from "../assets/images/star.svg";
+
+const title = "Home";
+const description = "My Description";
+---
+
+<LayoutDefault title={title} description={description}>
+	<section class="dark">
+		<div class="wrapper banner-intro">
+			<div class="grid g-center-y g-start g-gap">
+				<h1 class="fs-6 uppercase bold balance">
+					Real <span style="color:var(--c-yellow)">results.</span>
+					Real <span style="color:var(--c-yellow)">clients.</span>
+					Real <span style="color:var(--c-yellow)">stories.</span>
+				</h1>
+				<p>Discover how we've transformed brands through strategic marketing solutions</p>
+				<span class="pill green br-e fs-3"> Explore Our Success Stories </span>
+			</div>
+			<div class="grid-icons">
+				<div>
+					<Book width={64} height={64} stroke="var(--c-pink)" class="book-animate" />
+				</div>
+				<div>
+					<Wave width={64} height={64} stroke="var(--c-orange)" class="wave-animate" />
+					<Splash width={64} height={64} fill="var(--c-blue)" class="splash-animate" />
+				</div>
+				<div>
+					<Arrow width={64} height={64} stroke="var(--c-green)" class="arrow-animate" />
+					<Circle width={64} height={64} stroke="var(--c-red)" class="circle-animate" />
+					<Snow width={64} height={64} stroke="var(--c-yellow)" class="snow-animate" />
+				</div>
+				<div>
+					<Arch width={64} height={64} stroke="var(--c-yellow)" class="arch-animate" />
+					<Pointer width={64} height={64} stroke="var(--c-orange)" class="pointer-animate" />
+					<Star width={64} height={64} fill="var(--c-blue)" class="star-animate" />
+				</div>
+			</div>
+		</div>
+		<div class="tilt edge move gb center uppercase fs-3 bold balance">&nbsp;</div>
+	</section>
+
+	<section class="dark">
+		<div class="wrapper">
+			<ul role="list" class="grid-blogs">
+				<li>
+					<Link href="studies/africa-skills/" }>
+						<div class="hero ratio square">
+							<Image src={africaSkills} alt="africa skills" format="avif" />
+						</div>
+						<div class="excerpt">
+							<h4 class="title center">Africa Skills</h4>
+						</div>
+					</Link>
+				</li>
+				<li>
+					<Link href="studies/china-town/" }>
+						<div class="hero ratio square">
+							<Image src={chinaTown} alt="africa skills" format="avif" />
+						</div>
+						<div class="excerpt">
+							<h4 class="title center">China Town</h4>
+						</div>
+					</Link>
+				</li>
+				<li>
+					<Link href="studies/apprentice-eatery/">
+						<div class="hero ratio square">
+							<Image src={apprenticeEatery} alt="africa skills" format="avif" />
+						</div>
+						<div class="excerpt">
+							<h4 class="title center">Apprentice Eatery</h4>
+						</div>
+					</Link>
+				</li>
+				<li>
+					<Link href="studies/ivoda/">
+						<div class="hero ratio square">
+							<Image src={ivoda} alt="africa skills" format="avif" />
+						</div>
+						<div class="excerpt">
+							<h4 class="title center">Ivoda</h4>
+						</div>
+					</Link>
+				</li>
+				<li>
+					<Link href="studies/acumen-group/" }>
+						<div class="hero ratio square">
+							<Image src={acumenGroup} alt="africa skills" format="avif" />
+						</div>
+						<div class="excerpt">
+							<h4 class="title center">The Acumen Group</h4>
+						</div>
+					</Link>
+				</li>
+				<li>
+					<Link href="studies/ti-brokers/">
+						<div class="hero ratio square">
+							<Image src={tiBrokers} alt="africa skills" format="avif" />
+						</div>
+						<div class="excerpt">
+							<h4 class="title center">TI Brokers</h4>
+						</div>
+					</Link>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="dark">
+		<div class="wrapper grid g-center g-gap">
+			<h2 class="fs-4">Ready to Elevate Your Brand?</h2>
+			<Button
+				href="https://connect.inkfish.co.za/hello/"
+				class="yellow round arrow outline"
+				text="Book a Free Strategy Call"
+			/>
+		</div>
+	</section>
+</LayoutDefault>
