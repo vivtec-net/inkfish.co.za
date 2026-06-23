@@ -1,0 +1,13 @@
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	viewBox="0 0 512 512"
+	class="arrow-icons"
+	fill="none"
+	stroke="CanvasText"
+	stroke-linecap="round"
+	stroke-width="100"
+>
+	<path d="M55 457 457 55" />
+	<path d="M55 55h402" />
+	<path d="M457 55v402" />
+</svg>
