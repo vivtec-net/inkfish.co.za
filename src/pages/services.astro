@@ -1,0 +1,216 @@
+---
+import LayoutDefault from "../layouts/layoutdefault.astro";
+import Button from "../blocks/button.astro";
+
+import Book from "../assets/images/book.svg";
+import Snow from "../assets/images/snow.svg";
+import Arrow from "../assets/images/arrow.svg";
+import Arch from "../assets/images/arch.svg";
+import Wave from "../assets/images/wave.svg";
+import Circle from "../assets/images/circle.svg";
+import Splash from "../assets/images/splash.svg";
+import Pointer from "../assets/images/pointer.svg";
+import Star from "../assets/images/star.svg";
+
+const title = "Home";
+const description = "My Description";
+---
+
+<LayoutDefault title={title} description={description}>
+	<section class="dark">
+		<div class="wrapper banner-intro">
+			<div class="grid g-gap g-start">
+				<h1 class="fs-6 uppercase bold balance trim">
+					What you need. All in <span style="color:var(--c-orange)">one team.</span>
+				</h1>
+				<p>
+					You don't need five different freelancers or three part-time marketers. You need one sharp, proactive team
+					that handles it all. Strategy, content, design, websites, ads, and reporting.
+				</p>
+				<span class="pill green br-e fs-3"> That's us </span>
+			</div>
+			<div class="grid-icons">
+				<div>
+					<Book width={64} height={64} stroke="var(--c-pink)" class="book-animate" />
+				</div>
+				<div>
+					<Wave width={64} height={64} stroke="var(--c-orange)" class="wave-animate" />
+					<Splash width={64} height={64} fill="var(--c-blue)" class="splash-animate" />
+				</div>
+				<div>
+					<Arrow width={64} height={64} stroke="var(--c-green)" class="arrow-animate" />
+					<Circle width={64} height={64} stroke="var(--c-red)" class="circle-animate" />
+					<Snow width={64} height={64} stroke="var(--c-yellow)" class="snow-animate" />
+				</div>
+				<div>
+					<Arch width={64} height={64} stroke="var(--c-yellow)" class="arch-animate" />
+					<Pointer width={64} height={64} stroke="var(--c-orange)" class="pointer-animate" />
+					<Star width={64} height={64} fill="var(--c-blue)" class="star-animate" />
+				</div>
+			</div>
+		</div>
+		<div class="tilt edge move pr center uppercase fs-3 bold balance">&nbsp;</div>
+	</section>
+
+	<section>
+		<div class="wrapper">
+			<ul role="list" class="grid-services">
+				<li class="card">
+					<div class="front grid g-gap g-center">
+						<Splash width={64} height={64} fill="var(--c-yellow)" class="splash-animate" />
+						<h3 class="service c yellow">Brand<br /> Design</h3>
+						<p class="desc">Struggling to explain who you are, or why people should care? Let's fix that.</p>
+						<Button class="yellow round arrow outline fs-1" text="Starting From: R 4 500" />
+					</div>
+					<div class="back bg orange grid">
+						<h4 class="c-text ct-yellow">What it is:</h4>
+						<p>Conversion-focused websites built for speed, clarity, and growth.</p>
+						<h4 class="c-text ct-yellow">Why it matters:</h4>
+						<p>
+							It's your brand's home. It should work 24/7 to bring in leads, explain what you do, and make a killer
+							first impression.
+						</p>
+						<h4 class="c-text ct-yellow">What you get:</h4>
+						<p>
+							Mobile-optimised, SEO-ready builds 4-10 page options based on your needs Google Analytics, SSL, and speed
+							boosts Ongoing support, maintenance, and tweaks.
+						</p>
+						<Button href="https://connect.inkfish.co.za/hello/" class="yellow round fs-1" text="Book a Discover Call" />
+					</div>
+				</li>
+				<li class="card">
+					<div class="front grid g-gap g-center">
+						<Snow width={64} height={64} stroke="var(--c-orange)" class="snow-animate" />
+						<h3 class="service c orange">Web<br /> Design</h3>
+						<p class="desc">Not sure what to post or how to get people to care? That's where we shine.</p>
+						<Button class="orange round arrow outline fs-1" text="Starting From: R 12 000" />
+					</div>
+					<div class="back bg yellow">
+						<h4 class="c-text ct-orange">What it is:</h4>
+						<p>Conversion-focused websites built for speed, clarity, and growth.</p>
+						<h4 class="c-text ct-orange">Why it matters:</h4>
+						<p>
+							It's your brand's home. It should work 24/7 to bring in leads, explain what you do, and make a killer
+							first impression.
+						</p>
+						<h4 class="c-text ct-orange">What you get:</h4>
+						<p>
+							Mobile-optimised, SEO-ready builds 4-10 page options based on your needs Google Analytics, SSL, and speed
+							boosts Ongoing support, maintenance, and tweaks
+						</p>
+						<Button href="https://connect.inkfish.co.za/hello/" class="orange round fs-1" text="Book a Discover Call" />
+					</div>
+				</li>
+				<li class="card">
+					<div class="front grid g-gap g-center">
+						<Arch width={64} height={64} stroke="var(--c-pink)" class="arch-animate" />
+						<h3 class="service c pink">Content &<br /> Social Media</h3>
+						<p class="desc">Struggling to explain who you are, or why people should care? Let's fix that.</p>
+						<Button class="pink round arrow outline fs-1" text="Starting From: R 7 000 p/m" />
+					</div>
+					<div class="back bg red">
+						<h4 class="c-text ct-pink">What it is:</h4>
+						<p>We create smart, on-brand content for social media and blogs. Designed to connect. Built to convert.</p>
+						<h4 class="c-text ct-pink">Why it matters:</h4>
+						<p>
+							Good content keeps you relevant. Great content drives traffic, builds trust, and grows your brand over
+							time.
+						</p>
+						<h4 class="c-text ct-pink">What you get:</h4>
+						<p>
+							Strategy, captions, and design (yes, the full package) Posts across Instagram, Facebook, and LinkedIn
+							Reels that get saved, shared, and watched again SEO blog writing that brings long-term traffic
+						</p>
+						<Button href="https://connect.inkfish.co.za/hello/" class="pink round fs-1" text="Book a Discover Call" />
+					</div>
+				</li>
+				<li class="card">
+					<div class="front grid g-gap g-center">
+						<Circle width={64} height={64} stroke="var(--c-red)" class="circle-animate" />
+						<h3 class="service c red">Ads &<br /> Funnels</h3>
+						<p class="desc">Tired of spending money on ads that don't work? We don't blame you.</p>
+						<Button class="red round arrow outline fs-1" text="Starting From: R 2 900 p/m" />
+					</div>
+					<div class="back bg pink">
+						<h4 class="c-text ct-red">What it is:</h4>
+						<p>Conversion-focused websites built for speed, clarity, and growth.</p>
+						<h4 class="c-text ct-red">Why it matters:</h4>
+						<p>
+							It's your brand's home. It should work 24/7 to bring in leads, explain what you do, and make a killer
+							first impression.
+						</p>
+						<h4 class="c-text ct-red">What you get:</h4>
+						<p>
+							Mobile-optimised, SEO-ready builds 4-10 page options based on your needs Google Analytics, SSL, and speed
+							boosts Ongoing support, maintenance, and tweaks.
+						</p>
+						<Button href="https://connect.inkfish.co.za/hello/" class="red round fs-1" text="Book a Discover Call" />
+					</div>
+				</li>
+				<li class="card">
+					<div class="front grid g-gap g-center">
+						<Arrow width={64} height={64} stroke="var(--c-green)" class="arrow-animate" />
+						<h3 class="service c green">Email<br /> Marketing</h3>
+						<p class="desc">
+							Not using email yet?<br /> You're leaving sales on the table.
+						</p>
+						<Button class="green round arrow outline fs-1" text="Starting From: R 2 900 p/m" />
+					</div>
+					<div class="back bg blue">
+						<h4 class="c-text ct-green">What it is:</h4>
+						<p>Conversion-focused websites built for speed, clarity, and growth.</p>
+						<h4 class="c-text ct-green">Why it matters:</h4>
+						<p>
+							It's your brand's home. It should work 24/7 to bring in leads, explain what you do, and make a killer
+							first impression.
+						</p>
+						<h4 class="c-text ct-green">What you get:</h4>
+						<p>
+							Mobile-optimised, SEO-ready builds 4-10 page options based on your needs Google Analytics, SSL, and speed
+							boosts Ongoing support, maintenance, and tweaks.
+						</p>
+						<Button href="https://connect.inkfish.co.za/hello/" class="green round fs-1" text="Book a Discover Call" />
+					</div>
+				</li>
+				<li class="card">
+					<div class="front grid g-gap g-center">
+						<Pointer width={64} height={64} stroke="var(--c-blue)" class="pointer-animate" />
+						<h3 class="service c blue blof">Hosting &<br /> Domains</h3>
+						<p class="desc">Behind every great website is a solid foundation. We handle that too.</p>
+						<Button class="blue round arrow outline fs-1" text="Starting From: R 126.50 p/m" />
+					</div>
+					<div class="back bg green">
+						<h4 class="c-text ct-blue">What it is:</h4>
+						<p>Conversion-focused websites built for speed, clarity, and growth.</p>
+						<h4 class="c-text ct-blue">Why it matters:</h4>
+						<p>
+							It's your brand's home. It should work 24/7 to bring in leads, explain what you do, and make a killer
+							first impression.
+						</p>
+						<h4 class="c-text ct-blue">What you get:</h4>
+						<p>
+							Mobile-optimised, SEO-ready builds 4-10 page options based on your needs Google Analytics, SSL, and speed
+							boosts Ongoing support, maintenance, and tweaks.
+						</p>
+						<Button href="https://connect.inkfish.co.za/hello/" class="blue round fs-1" text="Book a Discover Call" />
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section class="dark">
+		<div class="wrapper banner-intro" style="gap: 2em">
+			<div class="grid g-gap g-start-x">
+				<h2 class="fs-5 balance">Get the support your brand <span class="c orange">deserves</span></h2>
+				<p>
+					Book a free discovery call and let's map out your next smart move. Whether it's branding, a new website, or a
+					full marketing overhaul.
+				</p>
+				<Button href="https://connect.inkfish.co.za/hello/" class="orange round arrow" text="Book My FREE Call" />
+			</div>
+			<div>
+				<img src="../images/handshake.avif" alt="handshake" />
+			</div>
+		</div>
+	</section>
+</LayoutDefault>
