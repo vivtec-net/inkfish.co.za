@@ -1,3 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="gate" fill="none" stroke="CanvasText" stroke-linecap="round" stroke-width="100">
-  <path d="M55 566V290C55 55 245 55 256 55s201 0 201 235v276"/>
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	viewBox="0 0 512 512"
+	id="arch"
+	fill="none"
+	stroke="CanvasText"
+	stroke-linecap="round"
+	stroke-width="100"
+>
+	<path d="M55 566V290C55 55 245 55 256 55s201 0 201 235v276" />
+
+	<style>
+		@media (prefers-reduced-motion: no-preference) {
+			#arch.animate {
+				path {
+					animation: draw 2s linear infinite;
+					stroke-dasharray: 500;
+					stroke-dashoffset: 750;
+				}
+			}
+
+			@keyframes draw {
+				to {
+					stroke-dashoffset: -250;
+				}
+			}
+		}
+	</style>
 </svg>
