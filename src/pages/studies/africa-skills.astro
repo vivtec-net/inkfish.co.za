@@ -1,0 +1,187 @@
+---
+import LayoutDefault from "../../layouts/layoutdefault.astro";
+
+import Book from "../../assets/images/book.svg";
+import Snow from "../../assets/images/snow.svg";
+import Arrow from "../../assets/images/arrow.svg";
+import Arch from "../../assets/images/arch.svg";
+import Wave from "../../assets/images/wave.svg";
+import Circle from "../../assets/images/circle.svg";
+import Splash from "../../assets/images/splash.svg";
+import Pointer from "../../assets/images/pointer.svg";
+import Star from "../../assets/images/star.svg";
+
+const title = "Home";
+const description = "My Description";
+---
+
+<LayoutDefault title={title} description={description}>
+	<section class="dark">
+		<div class="wrapper banner-intro">
+			<div class="grid g-center-y">
+				<h1 class="fs-6 uppercase">Africa Skills</h1>
+				<p class="fs-3">New Look. Same Purpose. Bigger Impact.</p>
+			</div>
+			<div class="grid-icons">
+				<div>
+					<Wave width={64} height={64} stroke="var(--c-blue)" class="wave-animate" />
+				</div>
+				<div>
+					<Splash width={64} height={64} fill="var(--c-yellow)" class="splash-animate" />
+				</div>
+				<div>
+					<Star width={64} height={64} fill="var(--c-red)" class="star-animate" />
+				</div>
+				<div>
+					<Snow width={64} height={64} stroke="var(--c-yellow)" class="snow-animate" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section style="padding-top: 0;">
+		<div class="brand-theme"></div>
+		<div class="wrapper columns center-y" style="--col-size: 300px">
+			<div>
+				<h2 class="fs-5 uppercase">The Challenge</h2>
+				<p class="bold">
+					We're Inkfish, a boutique digital marketing agency solving real business problems since 2004. We're small by
+					design. sharp, agile, and all in on your success.
+				</p>
+				<p>
+					A little stuck in the early 2000s. Their digital brand didn't reflect the innovation, energy, or excellence
+					happening on campus daily. It was time for a makeover that matched their mission.
+				</p>
+			</div>
+			<div class="brand-logo">
+				<img src="../../images/inkfish-case-studies-africa-skills-logo.avif" alt="" />
+			</div>
+		</div>
+	</section>
+	<img src="../../images/inkfish-case-studies-africa-skills-devices.avif" alt="" />
+	<section class="brand-gradient dark overlay watermark">
+		<div class="wrapper columns center-y" style="--col-size: 200px">
+			<div>
+				<img src="../../images/inkfish-case-studies-africa-skills.avif" alt="" class="site-shot" />
+			</div>
+			<div class="grid" style="gap: 5rem">
+				<div>
+					<h2 class="fs-5 uppercase">The solution</h2>
+					<p class="bold">We didn't throw out the identity, we refined it. Our team delivered:</p>
+					<ul>
+						<li>A new, modernised logo that kept their legacy but added a fresh edge</li>
+						<li>A user-friendly website that spoke to both students and corporate partners</li>
+						<li>SEO improvements and targeted Meta Ads to drive visibility across Google and social platforms</li>
+					</ul>
+					<p>
+						The rebrand didn't shout. It spoke clearly. And it resonated with the audiences Africa Skills wanted to
+						reach.
+					</p>
+				</div>
+				<div>
+					<h2 class="fs-5 uppercase">The result</h2>
+					<p class="bold">
+						More web traffic. More applications. More social engagement. But most importantly? A stronger voice that
+						finally matched the heart of the organisation. Students, parents, and industry partners now see Africa
+						Skills as the forward-moving, people-first institution it truly is.
+					</p>
+					<p>Tools Used</p>
+					<ul>
+						<li>WordPress</li>
+						<li>Adobe Illustrator</li>
+						<li>SEO Tools</li>
+						<li>Meta Ads</li>
+					</ul>
+					<p>
+						The rebrand didn't shout. It spoke clearly. And it resonated with the audiences Africa Skills wanted to
+						reach.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section style="background-color: var(--brand-color-1);">
+		<div class="wrapper columns">
+			<img src="../../images/inkfish-case-studies-africa-skills-sm-1.avif" alt="" />
+			<img src="../../images/inkfish-case-studies-africa-skills-sm-2.avif" alt="" />
+			<img src="../../images/inkfish-case-studies-africa-skills-sm-3.avif" alt="" />
+		</div>
+	</section>
+
+	<style>
+		:root {
+			--brand-color-1: #002859;
+			--brand-color-2: #204780;
+			--brand-color-3: #00aa65;
+			--brand-color-4: #97e180;
+		}
+		body {
+			color: #002859;
+		}
+		.brand-theme {
+			background: linear-gradient(
+				to right,
+				var(--brand-color-1) 0%,
+				var(--brand-color-1) 25%,
+				var(--brand-color-2) 25%,
+				var(--brand-color-2) 50%,
+				var(--brand-color-3) 50%,
+				var(--brand-color-3) 75%,
+				var(--brand-color-4) 75%,
+				var(--brand-color-4) 100%
+			);
+			height: 100px;
+		}
+		.brand-gradient {
+			background: linear-gradient(to bottom, var(--brand-color-3), var(--brand-color-4));
+		}
+		.brand-logo {
+			background: var(--brand-color-1);
+			padding: 3em;
+			border-radius: 1.5em;
+		}
+		.site-shot {
+			width: min(100%, 400px);
+			margin: 0 auto;
+			aspect-ratio: 1 / 2.5;
+			object-fit: cover;
+			object-position: top;
+			mask-image: linear-gradient(black 50%, transparent);
+		}
+		.columns {
+			--col-size: 200px;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--col-size)), 1fr));
+			gap: 3em;
+
+			&.center-y {
+				place-items: center;
+			}
+		}
+		img {
+			filter: drop-shadow(10px 10px 5px #00000030);
+		}
+		section {
+			position: relative;
+			isolation: isolate;
+
+			&.overlay::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background: #00000020;
+				z-index: -2;
+			}
+
+			&.watermark::after {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background: url("../../images/inkfish-case-studies-africa-skills-watermark.avif") center center / cover
+					no-repeat;
+				z-index: -1;
+				filter: brightness(30%) invert(1);
+			}
+		}
+	</style>
+</LayoutDefault>
