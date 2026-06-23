@@ -1,17 +1,301 @@
 ---
+import LayoutDefault from "../layouts/layoutdefault.astro";
 
+import Button from "../blocks/button.astro";
+
+import Book from "../assets/images/book.svg";
+import Snow from "../assets/images/snow.svg";
+import Arrow from "../assets/images/arrow.svg";
+import Arch from "../assets/images/arch.svg";
+import Wave from "../assets/images/wave.svg";
+import Circle from "../assets/images/circle.svg";
+import Splash from "../assets/images/splash.svg";
+import Pointer from "../assets/images/pointer.svg";
+import Star from "../assets/images/star.svg";
+
+const title = "Home";
+const description = "My Description";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<LayoutDefault title={title} description={description}>
+	<section class="dark">
+		<div class="wrapper banner-intro">
+			<div class="grid g-gap">
+				<h1 class="fs-6 uppercase trim">
+					We make<br /> your brand<br />
+					<span style="color:var(--c-pink)">impossible</span> to ignore
+				</h1>
+				<p class="fs-3">We run your content, website, and ads, so you can run your business.</p>
+				<div class="flex">
+					<Button href="https://connect.inkfish.co.za/hello/" class="blue round arrow" text="Book FREE Strategy Call" />
+					<Button
+						href="https://connect.inkfish.co.za/audit/"
+						class="yellow round arrow outline"
+						text="Get FREE Brand Audit"
+					/>
+				</div>
+			</div>
+			<div class="grid-icons">
+				<div>
+					<Book width={64} height={64} stroke="var(--c-pink)" class="book-animate" />
+				</div>
+				<div>
+					<Wave width={64} height={64} stroke="var(--c-orange)" class="wave-animate" />
+					<Splash width={64} height={64} fill="var(--c-blue)" class="splash-animate" />
+				</div>
+				<div>
+					<Arrow width={64} height={64} stroke="var(--c-green)" class="arrow-animate" />
+					<Circle width={64} height={64} stroke="var(--c-red)" class="circle-animate" />
+					<Snow width={64} height={64} stroke="var(--c-yellow)" class="snow-animate" />
+				</div>
+				<div>
+					<Arch width={64} height={64} stroke="var(--c-yellow)" class="arch-animate" />
+					<Pointer width={64} height={64} stroke="var(--c-orange)" class="pointer-animate" />
+					<Star width={64} height={64} fill="var(--c-blue)" class="star-animate" />
+				</div>
+			</div>
+		</div>
+		<div class="tilt edge move gb center uppercase fs-3 bold balance">
+			More time for you. More leads for your brand. <span style="color: var(--c-yellow);">Zero marketing meltdowns</span
+			>
+		</div>
+	</section>
+	<section class="dark">
+		<div class="wrapper narrow grid g-gap g-center">
+			<h2 class="balance fs-5 center">
+				Inkfish is a South African <span style="color: var(--c-yellow);">digital marketing agency.</span>
+			</h2>
+			<p class="fs-4 center" style="line-height: 2;">
+				We create scroll-stopping content, <span class="pill blue br-a">sleek websites</span>, <span
+					class="pill pink br-e">smart ads</span
+				>, and <span class="pill green br-r">brand strategies</span> for businesses who want to grow fast and look good doing
+				it.
+			</p>
+		</div>
+	</section>
+	<section>
+		<div class="wrapper grid g-gap">
+			<h2 class="balance fs-4 center" style="color: var(--c-green);">let's fix what's slowing you down</h2>
+			<div class="grid-cards">
+				<div class="card">
+					<div>
+						<Star width={64} height={64} fill="var(--c-yellow)" class="bg orange star-animate" />
+						<Pointer width={64} height={64} stroke="var(--c-yellow)" class="bg blue pointer-animate" />
+						<Arrow width={64} height={64} stroke="var(--c-red)" class="bg pink arrow-animate" />
+					</div>
+					<div>
+						<h3>
+							<span class="pill c blue br-a fs-4">Before Inkfish</span>
+						</h3>
+						<ul>
+							<li>Your website's just… there. Not working.</li>
+							<li>Your content gets ignored; or worse, it bores.</li>
+							<li>Your ads are costing money without clear returns</li>
+							<li>You're juggling too much and marketing's always last on the list</li>
+						</ul>
+					</div>
+				</div>
+				<div class="card">
+					<div>
+						<Splash width={64} height={64} fill="var(--c-orange)" class="bg yellow splash-animate" />
+						<Snow width={64} height={64} stroke="var(--c-blue)" class="bg green snow-animate" />
+						<Circle width={64} height={64} stroke="var(--c-pink)" class="bg red circle-animate" />
+					</div>
+					<div>
+						<h3>
+							<span class="pill c blue br-a fs-4">After Inkfish</span>
+						</h3>
+						<ul>
+							<li>Your site works as hard as you do (and looks better doing it).</li>
+							<li>Content? Click-worthy. Shareable. On-brand.</li>
+							<li>Ads? ROI-driven, not guesswork.</li>
+							<li>You? Back to what you do best, without dropping the marketing ball.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<p class="center fs-2">
+				We're your full-stack marketing team-web, design, content, ads. Done right. Done for you.
+			</p>
+		</div>
+		<div class="wrapper">
+			<div class="dark tilt move yr center uppercase bold">
+				<span> Inkfish plugs in like your in-house team, minus the overhead and hiring drama. </span>
+			</div>
+		</div>
+	</section>
+	<section class="dark">
+		<div class="wrapper grid g-gap">
+			<div class="services">
+				<div class="intro">
+					<div class="grid g-gap">
+						<h2 class="balance fs-4" style="color: var(--c-green);">smart services. real results.</h2>
+						<p>From brand building to clicks and conversions. We cover it all.</p>
+						<p>Pick what you need or let us run the full system.</p>
+						<Button href="/services" class="blue round arrow" text="View All Services" />
+					</div>
+					<div class="icons">
+						<div>
+							<Splash width={64} height={64} fill="var(--c-orange)" class="splash-animate" />
+						</div>
+						<div>
+							<Arrow width={64} height={64} stroke="var(--c-pink)" class="arrow-animate" />
+							<Arch width={64} height={64} stroke="var(--c-yellow)" class="arch-animate" />
+						</div>
+						<div>
+							<Pointer width={64} height={64} stroke="var(--c-red)" class="pointer-animate" />
+							<Star width={64} height={64} fill="var(--c-green)" class="star-animate" />
+							<Wave width={64} height={64} stroke="var(--c-blue)" class="wave-animate" />
+						</div>
+					</div>
+				</div>
+				<div class="cards light">
+					<ul role="list" class="stack">
+						<li class="card grid g-gap">
+							<h3 class="c yellow trim">branding</h3>
+							<p>
+								Looks that stop the scroll. Messaging that moves the needle. We design logos, brand guides, pitch decks,
+								and stationery that build real recognition fast.
+							</p>
+							<div class="pill c yellow br-a">Starting From: R 4 500</div>
+						</li>
+						<li class="card grid g-gap">
+							<h3 class="c pink trim">content & social</h3>
+							<p>
+								Posts that make people pause. Reels that get saved. We handle strategy, design, writing, SEO, and
+								posting across Instagram, LinkedIn and Facebook. Need a blog too? We've got that.
+							</p>
+							<div class="pill c pink br-a">Starting From: R 7 000</div>
+						</li>
+					</ul>
+					<ul role="list" class="stack">
+						<li class="card grid g-gap">
+							<h3 class="c orange trim">web design</h3>
+							<p>
+								A good-looking website is cute. A converting one is better. We design sites that load fast, sell hard,
+								and scale with your brand. Maintenance, analytics, training and optimisations? Covered.
+							</p>
+							<div class="pill c orange br-a">Starting From: R 12 000</div>
+						</li>
+						<li class="card grid g-gap">
+							<h3 class="c red trim">ads & funnels</h3>
+							<p>
+								Ads shouldn't feel like throwing money into the void. We build full-funnel campaigns on Meta and Google
+								that connect spend to sales. Landing pages, email flows, and lead magnets? Done.
+							</p>
+							<div class="pill c red br-a">Starting From: R 2 900</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section style="background-color: var(--c-green);">
+		<div class="wrapper grid g-gap">
+			<h2 class="balance fs-4 center" style="color: var(--c-white);">what our clients say (and yes, we blushed)</h2>
+			<div
+				class="pill br-a bg white center bold c-text ct-green"
+				style="padding: 0.5em 2em; border: unset; width: fit-content; margin-inline: auto"
+			>
+				Real results. No scripts. Just happy clients
+			</div>
+			<div class="reviews">
+				<ul role="list">
+					<li>
+						"Inkfish has been our marketing team for more than six years. They jump in fast, finish the work, and save
+						us the cost of minimum five hires. Their skill keeps opening new doors."
+						<div class="person">Phillip Harmse - UXI</div>
+					</li>
+					<li>
+						"Inkfish understands what we want and what we actually need. We left once, tried others, and came straight
+						back. Their quality is unmatched."
+						<div class="person">Madeleine Nel - Silver Edge</div>
+					</li>
+					<li>
+						"Inkfish delivered a website I love, creative and fast. Every request met with a no-nonsense 'can-do'
+						attitude. They waited for my feedback without pressure and still turned updates around in hours. The whole
+						team made the process smooth and gave me confidence to keep growing my site."
+						<div class="person">Gail Schoeman</div>
+					</li>
+					<li>
+						"Inkfish's support was clear, timely, and fast. They fixed our booking-system hiccups straight after hosting
+						handover, and reservations now run without a hitch."
+						<div class="person">Windhoek Pet Lodge</div>
+					</li>
+					<li>
+						"Inkfish's dynamic approach to marketing and design has been a game changer for my business. They have been
+						ale to accommadate my needs on very short notice. I valie them as a trusted business partner and look
+						forward to the future with Inkfish."
+						<div class="person">Dylan Mattison</div>
+					</li>
+					<li>
+						"The partnership that we developed with Inkfish has been a turning point fo us as a Business Chamber. Our
+						social media presence especially, took us to a new level. We have been receiving more views and interest
+						than ever before. The designers and contact persons are always on the ready, and it is absolutely amazing
+						how a small idea can take form and become exactly what we envisioned. The attention to detail is so evident
+						in all aspects."
+						<div class="person">Bernadette Schaap</div>
+					</li>
+				</ul>
+				<ul role="list" aria-hidden="true">
+					<li>
+						"Inkfish has been our marketing team for more than six years. They jump in fast, finish the work, and save
+						us the cost of minimum five hires. Their skill keeps opening new doors."
+						<div class="person">Phillip Harmse - UXI</div>
+					</li>
+					<li>
+						"Inkfish understands what we want and what we actually need. We left once, tried others, and came straight
+						back. Their quality is unmatched."
+						<div class="person">Madeleine Nel - Silver Edge</div>
+					</li>
+					<li>
+						"Inkfish delivered a website I love, creative and fast. Every request met with a no-nonsense 'can-do'
+						attitude. They waited for my feedback without pressure and still turned updates around in hours. The whole
+						team made the process smooth and gave me confidence to keep growing my site."
+						<div class="person">Gail Schoeman</div>
+					</li>
+					<li>
+						"Inkfish's support was clear, timely, and fast. They fixed our booking-system hiccups straight after hosting
+						handover, and reservations now run without a hitch."
+						<div class="person">Windhoek Pet Lodge</div>
+					</li>
+					<li>
+						"Inkfish's dynamic approach to marketing and design has been a game changer for my business. They have been
+						ale to accommadate my needs on very short notice. I valie them as a trusted business partner and look
+						forward to the future with Inkfish."
+						<div class="person">Dylan Mattison</div>
+					</li>
+					<li>
+						"The partnership that we developed with Inkfish has been a turning point fo us as a Business Chamber. Our
+						social media presence especially, took us to a new level. We have been receiving more views and interest
+						than ever before. The designers and contact persons are always on the ready, and it is absolutely amazing
+						how a small idea can take form and become exactly what we envisioned. The attention to detail is so evident
+						in all aspects."
+						<div class="person">Bernadette Schaap</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section class="dark">
+		<div class="wrapper banner-intro" style="gap: 2em">
+			<div class="grid g-gap g-start-x">
+				<div style="display: flex; flex-flow: wrap; gap: 1em;">
+					<span class="pill bg red br-a">no jargon</span>
+					<span class="pill bg pink br-e" style="color: var(--c-black)">No pressure</span>
+					<span class="pill white br-a">just results</span>
+				</div>
+				<h2 class="fs-4">
+					Let's build your marketing System <span class="c yellow">(and make it actually work)</span>
+				</h2>
+				<p>Book a free strategy call or brand audit. We'll show you where the gaps are and exactly how to fix them.</p>
+				<Button href="https://connect.inkfish.co.za/hello/" class="blue round arrow" text="Book a FREE Strategy Call" />
+			</div>
+			<div>
+				<img src="images/handshake.avif" alt="handshake" width="500" height="401" />
+			</div>
+		</div>
+	</section>
+</LayoutDefault>
