@@ -1,8 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="splash" fill="CanvasText">
-  <path d="M256 256 203 71a56 56 0 1 1 107 0z" />
-  <path d="m256 256 133-139c26-26 70-21 89 11 18 32 1 73-35 82z" />
-  <path d="m256 256 187 46a56 56 0 1 1-53 93z" />
-  <path d="m256 256 53 185c11 35-16 71-53 71s-64-36-53-71z" />
-  <path d="M256 256 123 395a56 56 0 1 1-53-93z" />
-  <path d="M256 256 69 210a56 56 0 1 1 53-93z" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="splash" fill="CanvasText">
+	<path d="M256 256 203 71a56 56 0 1 1 107 0z" />
+	<path d="m256 256 133-139c26-26 70-21 89 11 18 32 1 73-35 82z" />
+	<path d="m256 256 187 46a56 56 0 1 1-53 93z" />
+	<path d="m256 256 53 185c11 35-16 71-53 71s-64-36-53-71z" />
+	<path d="M256 256 123 395a56 56 0 1 1-53-93z" />
+	<path d="M256 256 69 210a56 56 0 1 1 53-93z" />
+
+	<style>
+		@media (prefers-reduced-motion: no-preference) {
+			#splash.animate {
+				path {
+					transform-box: view-box;
+					animation: splash 1.5s ease-in-out infinite alternate;
+				}
+				path:nth-of-type(1) {
+					animation-delay: -0.5s;
+				}
+				path:nth-of-type(2) {
+					animation-delay: -1s;
+				}
+				path:nth-of-type(3) {
+					animation-delay: -1.5s;
+				}
+				path:nth-of-type(4) {
+					animation-delay: -2s;
+				}
+				path:nth-of-type(5) {
+					animation-delay: -2.5s;
+				}
+				path:nth-of-type(6) {
+					animation-delay: -3s;
+				}
+			}
+
+			@keyframes splash {
+				to {
+					scale: 0.75;
+				}
+			}
+		}
+	</style>
 </svg>
