@@ -1,4 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="waves" fill="none" stroke="CanvasText" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="100">
-  <path d="M50 50s0 110 107 110S258 50 360 50s102 110 102 110"/>
-  <path d="M462 462s0-110-107-110-101 110-203 110S50 352 50 352"/>
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	viewBox="0 0 512 512"
+	id="waves"
+	fill="none"
+	stroke="CanvasText"
+	stroke-linecap="round"
+	stroke-linejoin="bevel"
+	stroke-width="100"
+>
+	<path d="M50 50s0 110 107 110S258 50 360 50s102 110 102 110" />
+	<path d="M462 462s0-110-107-110-101 110-203 110S50 352 50 352" />
+
+	<style>
+		@media (prefers-reduced-motion: no-preference) {
+			#waves.animate {
+				path {
+					animation: wavy-1 3s ease-in-out infinite alternate;
+					stroke-dasharray: 400;
+				}
+
+				path:nth-of-type(2) {
+					animation-name: wavy-2;
+					stroke-dasharray: 400;
+				}
+			}
+
+			@keyframes wavy-1 {
+				to {
+					d: path("M50 160S50 50 157 50s101 110 203 110S462 50 462 50");
+				}
+			}
+			@keyframes wavy-2 {
+				to {
+					d: path("M462 352s0 110-107 110-101-110-203-110S50 462 50 462");
+				}
+			}
+		}
+	</style>
 </svg>
