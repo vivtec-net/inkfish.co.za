@@ -13,7 +13,8 @@
 	<style>
 		@media (prefers-reduced-motion: no-preference) {
 			#pointer.animate {
-				path {
+				& > path {
+					will-change: transform;
 					animation: pointer 2s ease-in-out infinite alternate;
 				}
 			}
