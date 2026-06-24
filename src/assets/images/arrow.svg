@@ -14,16 +14,17 @@
 	<style>
 		@media (prefers-reduced-motion: no-preference) {
 			#arrow.animate {
-				path {
+				& > path {
+					will-change: transform;
 					transform-box: view-box;
 					transform-origin: calc(100% - 60px) calc(0% + 60px);
 					animation: 1.5s ease-in-out infinite alternate;
 				}
 
-				path:nth-of-type(2) {
+				& > path:nth-of-type(2) {
 					animation-name: arrow-r;
 				}
-				path:nth-of-type(3) {
+				& > path:nth-of-type(3) {
 					animation-name: arrow-f;
 				}
 			}
