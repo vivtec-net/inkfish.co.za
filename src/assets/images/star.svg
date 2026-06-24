@@ -4,7 +4,8 @@
 	<style>
 		@media (prefers-reduced-motion: no-preference) {
 			#star.animate {
-				path {
+				& > path {
+					will-change: transform;
 					animation: rotate 8s linear infinite;
 				}
 			}
