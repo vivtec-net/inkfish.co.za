@@ -13,7 +13,8 @@
 	<style>
 		@media (prefers-reduced-motion: no-preference) {
 			#circle.animate {
-				circle {
+				& > circle {
+					will-change: transform;
 					animation: loading 8s linear infinite;
 					stroke-dasharray: 1280;
 					stroke-dashoffset: 0;
