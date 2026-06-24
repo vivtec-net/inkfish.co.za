@@ -18,6 +18,7 @@
 		@media (prefers-reduced-motion: no-preference) {
 			#book.animate {
 				path {
+					will-change: transform;
 					transform-box: view-box;
 					transform-origin: calc(100% - 30px) 50%;
 					animation: turn 4s ease-in-out infinite alternate both;
