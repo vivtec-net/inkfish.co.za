@@ -21,6 +21,7 @@
 		@media (prefers-reduced-motion: no-preference) {
 			#snow.animate {
 				& > path {
+					will-change: transform;
 					animation: spin 4s ease-in-out infinite;
 				}
 				& > path:nth-of-type(1) {
