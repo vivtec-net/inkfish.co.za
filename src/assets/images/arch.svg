@@ -12,7 +12,8 @@
 	<style>
 		@media (prefers-reduced-motion: no-preference) {
 			#arch.animate {
-				path {
+				& > path {
+					will-change: transform;
 					animation: draw 2s linear infinite;
 					stroke-dasharray: 500;
 					stroke-dashoffset: 750;
