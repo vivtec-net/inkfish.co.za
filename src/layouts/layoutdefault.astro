@@ -23,31 +23,28 @@ const { title, description, image = `${import.meta.env.BASE_URL}images/placehold
 					</a>
 					<ul role="list" class="menu">
 						<li>
-							<Link href="" aria-current={pathname === `${import.meta.env.BASE_URL}` ? "page" : "false"}>Home</Link>
+							<Link href="">Home</Link>
 						</li>
 						<li>
-							<Link href="about/" aria-current={pathname === `${import.meta.env.BASE_URL}about/` ? "page" : "false"}
-								>About</Link
-							>
+							<Link href="about/">About</Link>
 						</li>
 						<li>
-							<Link
-								href="services/"
-								aria-current={pathname === `${import.meta.env.BASE_URL}services/` ? "page" : "false"}>Services</Link
-							>
+							<Link href="services/">Services</Link>
 						</li>
 						<li>
-							<Link
-								href="insights/"
-								aria-current={pathname === `${import.meta.env.BASE_URL}insights/` ? "page" : "false"}>Insights</Link
-							>
+							<Link href="insights/">Insights</Link>
 						</li>
 						<li>
-							<Link href="studies/" aria-current={pathname === `${import.meta.env.BASE_URL}studies/` ? "page" : "false"}
-								>Studies</Link
-							>
+							<Link href="studies/">Studies</Link>
 						</li>
-						<li><Button href="https://connect.inkfish.co.za/hello/" class="yellow outline round" text="Connect" /></li>
+						<li>
+							<Button
+								text="Connect"
+								class="yellow outline round"
+								href="https://connect.inkfish.co.za/hello/"
+								target="_self"
+							/>
+						</li>
 					</ul>
 				</nav>
 			</div>
