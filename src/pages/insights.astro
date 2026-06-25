@@ -5,6 +5,8 @@ import { Image } from "astro:assets";
 import LayoutDefault from "../layouts/layoutdefault.astro";
 
 import FormattedDate from "../blocks/date.astro";
+
+import Link from "../blocks/link.astro";
 import Button from "../blocks/button.astro";
 
 import Book from "../assets/images/book.svg";
@@ -57,7 +59,7 @@ const image = "../assets/images/star.svg";
 				{
 					posts.map((post) => (
 						<li role="listitem">
-							<a href={`${import.meta.env.BASE_URL}insights/${post.id}/`} data-cat={post.data.category}>
+							<Link href={`insights/${post.id}/`} data-cat={post.data.category}>
 								<div class="hero">
 									<Image src={post.data.image as any} format="avif" layout="constrained" alt="" />
 									<span class="category">{post.data.category}</span>
@@ -68,7 +70,7 @@ const image = "../assets/images/star.svg";
 								<div class="excerpt">
 									<h4 class="title">{post.data.title}</h4>
 								</div>
-							</a>
+							</Link>
 						</li>
 					))
 				}
