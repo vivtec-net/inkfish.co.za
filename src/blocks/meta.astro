@@ -5,16 +5,17 @@ const {
 	title,
 	description,
 	image = `${import.meta.env.BASE_URL}images/placeholder.webp`,
+	imageAlt = "Did not define alt text",
 	favicon = `${import.meta.env.BASE_URL}favicon.svg`,
 	sitemap = `${import.meta.env.BASE_URL}sitemap-index.xml`,
 	font = `${import.meta.env.BASE_URL}fonts/cocogoose-var.woff2`,
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const imageURL = new URL(image, Astro.url);
-const faviconURL = new URL(favicon, Astro.url);
-const sitemapURL = new URL(sitemap, Astro.url);
-const fontURL = new URL(font, Astro.url);
+const canonicalURL = new URL(Astro.url.pathname, Astro.url).toString();
+const imageURL = new URL(image, Astro.url).toString();
+const faviconURL = favicon.toString();
+const sitemapURL = sitemap.toString();
+const fontURL = font.toString();
 ---
 
 <head>
@@ -23,24 +24,23 @@ const fontURL = new URL(font, Astro.url);
 	<title>{title}</title>
 	<meta name="description" content={description} />
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta name="robots" content="index, follow" />
 	<meta name="generator" content={Astro.generator} />
-
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:url" content={Astro.url} />
-	<meta name="twitter:title" content={title} />
-	<meta name="twitter:description" content={description} />
-	<meta name="twitter:image" content={imageURL} />
+	<meta name="color-scheme" content="light" />
 
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content={Astro.url} />
+	<meta property="og:url" content={canonicalURL} />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
 	<meta property="og:image" content={imageURL} />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:alt" content={imageAlt} />
 
 	<link rel="canonical" href={canonicalURL} />
 	<link rel="icon" type="image/avif" href={faviconURL} />
 	<link rel="sitemap" type="application/xml" title="Sitemap" href={sitemapURL} />
-	<link rel="preconnect" href={fontURL} as="font" type="font/woff2" />
+	<link rel="preload" href={fontURL} as="font" type="font/woff2" />
 	<link rel="preload" href={stylesUrl} as="style" />
 	<link rel="stylesheet" href={stylesUrl} />
 </head>
