@@ -3,8 +3,7 @@ import Meta from "../blocks/meta.astro";
 import Link from "../blocks/link.astro";
 import Button from "../blocks/button.astro";
 
-const { pathname } = Astro.url;
-const { title, description, image = `${import.meta.env.BASE_URL}images/placeholder.webp` } = Astro.props;
+const { title, description, image } = Astro.props;
 ---
 
 <!doctype html>
