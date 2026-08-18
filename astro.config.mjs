@@ -4,9 +4,8 @@ import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-	site: "https://inkfish.co.za",
-	base: "/",
+	site: "https://vivtec-net.github.io/",
+	base: "inkfish.co.za/",
 	trailingSlash: "always",
 	integrations: [mdx(), sitemap()],
-	outDir: "../../server/inkfish.co.za",
 });
