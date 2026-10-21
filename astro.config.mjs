@@ -5,8 +5,7 @@ import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
 	site: "https://vivtec-net.github.io",
-	base: "/",
+	base: "/inkfish.co.za",
 	trailingSlash: "always",
 	integrations: [mdx(), sitemap()],
-	outDir: "inkfish.co.za",
 });
